@@ -1,0 +1,1328 @@
+show version
+Cisco IOS XE Software, Version 16.09.02
+Cisco IOS Software [Fuji], ISR Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.2, RELEASE SOFTWARE (fc4)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2018 by Cisco Systems, Inc.
+Compiled Mon 05-Nov-18 19:31 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2018 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+Guadalajara uptime is 3 hours, 55 minutes
+Uptime for this control processor is 3 hours, 57 minutes
+System returned to ROM by PowerOn
+System restarted at 20:39:51 UTC Sat Nov 16 2019
+System image file is "bootflash:isr4300-universalk9.16.09.02.SPA.bin"
+Last reload reason: PowerOn
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+
+
+Suite License Information for Module:'esg' 
+
+--------------------------------------------------------------------------------
+Suite                 Suite Current         Type           Suite Next reboot     
+--------------------------------------------------------------------------------
+FoundationSuiteK9     None                  None           None                  
+securityk9
+appxk9
+
+AdvUCSuiteK9          None                  None           None                  
+uck9
+cme-srst
+cube
+
+
+Technology Package License Information: 
+
+-----------------------------------------------------------------
+Technology    Technology-package           Technology-package
+              Current       Type           Next reboot  
+------------------------------------------------------------------
+appxk9           None             None             None
+uck9             None             None             None
+securityk9       securityk9       Permanent        securityk9
+ipbase           ipbasek9         Permanent        ipbasek9
+
+The current throughput level is 50000 kbps 
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco ISR4321/K9 (1RU) processor with 1784726K/6147K bytes of memory.
+Processor board ID FLM232712MK
+2 Gigabit Ethernet interfaces
+4 Serial interfaces
+32768K bytes of non-volatile configuration memory.
+4194304K bytes of physical memory.
+3207167K bytes of flash memory at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show running-config
+Building configuration...
+
+
+Current configuration : 8289 bytes
+!
+! Last configuration change at 00:17:05 UTC Sun Nov 17 2019 by cisco1
+! NVRAM config last updated at 23:44:27 UTC Sat Nov 16 2019 by cisco1
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname Guadalajara
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+enable password 7 0822455D0A16
+!
+no aaa new-model
+!
+no ip domain lookup
+ip domain name barco.com
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+multilink bundle-name authenticated
+!
+!
+key chain mykey
+ key 1
+  key-string securetraffic
+!
+!
+crypto pki trustpoint TP-self-signed-3849337002
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3849337002
+ revocation-check none
+ rsakeypair TP-self-signed-3849337002
+!
+!
+crypto pki certificate chain TP-self-signed-3849337002
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 33383439 33333730 3032301E 170D3139 31313136 32303431 
+  30345A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 38343933 
+  33373030 32308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100B4F6 294983B6 F71CA153 FCFB9863 7EB5E786 A1DD4D89 702275F6 
+  7FD4F168 DD7A8A15 E5518F8D 9127924C 17CB6B32 1A6D014C 8056BD5C FD4D8CFD 
+  C4B8D68A C32831B0 86ACDFA8 D065B2E7 D0099CF5 E9AD2602 32B878D5 F8B3AE54 
+  0C088A49 2A81EEC0 73922BE1 4F14E174 C0C88EF2 A0094C9C 0928B724 FC731D2D 
+  21FE07E0 A7B1B372 B2F34FDE 9AC3612D 2A938D79 501A995E 65FFF653 CB76C666 
+  D63827BB CDFC2AAB A45637BF E0C468D0 E2BB4049 1C6F7386 0EA2ECEC 38097821 
+  B643A73A 4D024162 D8F64172 89B010B6 135E549E 2A10EF8C CCC20C96 3353BBA7 
+  9648E128 688C321B 7D56A869 932AD681 AED994A8 60A60746 CC8333F9 C5D05972 
+  3715E620 58E90203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14963F17 66F0C67A BC50776B 84BAA534 9C75453F 
+  6F301D06 03551D0E 04160414 963F1766 F0C67ABC 50776B84 BAA5349C 75453F6F 
+  300D0609 2A864886 F70D0101 05050003 82010100 6E1C7D33 668184CB AA033395 
+  1D7CF57D 11D35730 964D2122 0903D0CE 99BD8270 CC52BEBB 3246E1E0 E8E47D02 
+  27A4EA56 468BA14B 1966BB0C E7775EC0 56E82E12 A264ACD3 B106EFB4 560E31FD 
+  50C5AEB5 BD8ED7A9 6F5A0A7F 830B785A 165EF25E F7A85F70 0E563FD9 B804D26E 
+  CBEC76F8 23D0C870 87D99C47 CD667F55 6D01A0A1 546CE857 EE1C5F08 D461B0DF 
+  6FF8D916 5A90F32F 52E01D45 22F7985D 271BEFA0 4222A6FD 50F9F499 764B7F0D 
+  FCF8CE65 6EC1C28A 62AAEB06 23C7FF7D 064D4612 A28AEAF2 AEDCFD53 E4A55CEF 
+  99B60B12 3B570CBE 5C760BF5 9D7C2CDA 19AA4399 DAA4A849 68FB43F2 23042E42 
+  16226E3A 593DD0B0 C54214E7 33F680D0 90BE6711
+  	quit
+!
+license udi pid ISR4321/K9 sn FLM2327015P
+no license smart enable
+diagnostic bootup level minimal
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+username cisco privilege 5 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+username cisco1 privilege 15 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+lldp run
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/0.25
+ description l2l MPLS_GDL
+ bandwidth 20000
+ encapsulation dot1Q 25
+ ip address 192.168.0.10 255.255.255.248
+ ip authentication mode eigrp 1 md5
+!
+interface GigabitEthernet0/0/0.31
+ description usuarios1_GDL
+ encapsulation dot1Q 31
+ ip address 172.4.31.254 255.255.254.0
+ ip helper-address 172.4.0.1
+ ip nat inside
+ ip access-group 100 in
+!
+interface GigabitEthernet0/0/0.36
+ description internet_GDL
+ encapsulation dot1Q 36
+ ip address 10.40.72.158 255.255.255.0
+ ip nat outside
+!
+interface GigabitEthernet0/0/0.37
+ description Servers
+ encapsulation dot1Q 37
+ ip address 172.4.0.254 255.255.255.0
+ ip nat inside
+!
+interface GigabitEthernet0/0/0.38
+ description admin switches_GDL
+ encapsulation dot1Q 38
+ ip address 172.4.38.254 255.255.255.0
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface Serial0/1/0
+ no ip address
+!
+interface Serial0/1/1
+ no ip address
+!
+interface Serial0/2/0
+ no ip address
+!
+interface Serial0/2/1
+ no ip address
+!
+interface GigabitEthernet0
+ vrf forwarding Mgmt-intf
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+router eigrp 1
+ network 172.4.0.0
+ network 192.168.0.0
+ passive-interface default
+ no passive-interface GigabitEthernet0/0/0.25
+!
+ip nat inside source list 1 interface GigabitEthernet0/0/0.36 overload
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip tftp source-interface GigabitEthernet0
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/0.36
+!
+ip ssh version 2
+!
+logging host 172.4.31.1
+access-list 1 remark ACL nat
+access-list 1 permit 172.4.30.0 0.0.1.255
+access-list 1 permit 172.4.0.0 0.0.0.255
+access-list 100 remark ACL Rocket league
+access-list 100 deny   tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2
+access-list 100 deny   tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2
+access-list 100 deny   tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2
+access-list 100 deny   tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2
+access-list 100 deny   tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2
+access-list 100 permit ip any any
+!
+!
+!
+!
+control-plane
+!
+banner motd ^C
+b
+(
+##################################################
+b
+(
+ Unauthorized access to this device is prohibited 
+b
+(
+##################################################
+b
+(
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >
+        |#'     `..'`..'          `###'        x:      /     /
+         \                                   xXX|     /    ./
+          \                                xXXX'|    /   ./
+          /`-.                                  `.  /   /
+         :    `-  ...........,                   | /  .'
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+                                   `:.:'
+
+^C
+!
+line con 0
+ exec-timeout 5 0
+ login local
+ transport input none
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ exec-timeout 5 0
+ login local
+line vty 5 15
+ exec-timeout 5 0
+ login local
+!
+ntp server 10.40.72.254
+time-range redes2
+ periodic weekend 15:00 to 22:00
+!
+!
+!
+!
+!
+!
+end
+
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show access-lists
+Standard IP access list 1
+    10 permit 172.4.30.0, wildcard bits 0.0.1.255
+    20 permit 172.4.0.0, wildcard bits 0.0.0.255
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (inactive) (31 matches)
+    60 permit ip any any (177815 matches)
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  1.173.98.29            13   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  3.15.144.198           50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  3.24.135.123           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  4.4.8.8                51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  5.61.0.165             43   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  5.166.55.84            41   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  5.188.210.101          14   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  5.188.210.245          48   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  8.5.129.79             51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  8.8.8.8                51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  8.36.80.192            29   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  8.253.112.108          28   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  10.40.72.158            -   6c5e.3bb3.6410  ARPA   GigabitEthernet0/0/0.36
+Internet  10.40.72.211            3   5057.a8bf.efe8  ARPA   GigabitEthernet0/0/0.36
+Internet  10.40.72.254            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  10.40.84.42            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  10.98.5.63             51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.83.65.43             0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.84.147.255          42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.86.126.129          35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.91.57.145           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.3.128           50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.3.254           20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.4.254           19   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.5.91            35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.6.254           49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.18.11           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.18.254          49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.42.15           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.42.254          32   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.136.254         49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.246.10          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.107.246.254         32   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.225.48.155          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.225.54.30           21   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.233.119.237         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.249.75.50           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.249.75.188          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.249.75.225          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  13.249.79.69           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  17.57.144.84           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  17.248.131.233          0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  17.248.185.41          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  17.248.185.72          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  17.253.3.209            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  20.36.217.101           0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  20.36.218.208          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  20.36.219.28            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  20.190.131.97          20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.11.216.198          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.12.133.52           34   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.44.168.195          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.44.169.183          42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.44.170.110          20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.46.186.7             0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.49.178.99           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.50.128.11           35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.55.51.143           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.63.110.48            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.65.11.27            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.204.131.62          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.209.252.22          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.211.75.90           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  23.211.81.31           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  31.13.89.53            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  34.89.58.235           37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  34.93.140.198          36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.186.224.47          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.186.224.53          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.190.10.112          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.190.17.176          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.190.41.140          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.190.160.66          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.237.227.90          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.242.143.131         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.243.140.3           44   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  35.244.178.179         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  37.200.64.50           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  38.90.226.11           50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  38.90.226.12           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  38.90.226.37           37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  38.90.226.38           47   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  38.90.226.39           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  38.90.226.40           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.67.188.15           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.79.66.194            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.85.182.43            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.10.66            35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.10.94            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.10.180           35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.22.183           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.22.186           20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.22.189           42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.90.216.49            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.91.72.120           30   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.91.73.194           35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.91.76.181            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.91.76.238            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.97.120.34           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.97.120.226          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.97.197.130          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.119.2.214           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.119.6.228           35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.119.7.170           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.119.7.171           34   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  40.126.0.73             0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  42.228.120.216          4   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  43.239.136.105         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.5.96.17             26   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.32.18.60            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.63.1.248            47   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.63.19.86            48   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.63.67.103           44   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.63.105.119          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.136.109.174         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  45.228.32.100          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  47.101.57.6            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  49.82.252.163          12   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.6.206.75            21   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.73.89.180            0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.109.20.45           49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.109.124.20           5   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.6.45             0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.6.47            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.32.7             7   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.32.8            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.74.44           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.75.150          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.76.34           42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.128.8           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.128.10          26   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.128.44          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.132.22          30   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.114.158.91          10   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.141.217.125         49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.159.17.76           45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.177.83.224           4   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.178.192.146         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.179.129.229         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.202.62.196          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.202.62.229          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.202.62.235          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.202.62.236          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.202.62.237          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.202.62.238          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.242.211.89           7   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  52.242.214.136         35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  54.67.87.6             37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  54.149.136.219         35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  54.154.47.148          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  54.189.198.21          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  54.210.32.159          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  54.228.209.74          20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  58.225.75.147          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  61.219.11.153          19   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  61.223.103.102         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  62.108.37.105          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  64.233.169.108         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  66.232.99.7            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  66.240.219.146          1   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  69.36.183.42           48   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  69.36.183.47           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  69.36.183.52           36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  69.36.183.57           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  71.6.232.4             21   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  72.21.81.200           20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  72.21.81.240           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  72.21.91.29            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.125.30.108           7   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.125.127.108         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.125.127.109         42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.201.228.18          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.201.228.127         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.201.228.145         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.201.228.152         31   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.201.228.185         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  74.201.228.223         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  77.247.108.77          35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  80.82.70.239           31   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  80.87.203.83           30   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  81.22.45.15             8   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  81.22.45.20            51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  82.102.173.73           8   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  83.29.229.231          44   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  83.97.20.46            15   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  85.105.137.73          22   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  85.105.153.136         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  85.221.204.146          5   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  89.248.160.193         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  89.248.168.202         43   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  89.248.172.85          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  91.189.91.139          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  91.189.94.173          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  91.189.95.3            45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  91.228.166.45          23   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  91.228.166.150         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  91.228.167.87          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  92.118.37.86            7   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  92.119.160.52          50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  92.119.160.143         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  92.246.76.233          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  93.62.253.231          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  93.174.95.106          13   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  100.25.219.177         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  101.51.80.67            1   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  103.23.210.172         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  103.194.166.118        36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  103.194.166.123        37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.17.57.91           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.17.58.91           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.20.21.239          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.42.79.240          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.46.116.119          0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.83.120.32          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.102.4.178          44   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.4           39   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.9           40   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.14          46   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.17          49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.20          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.33          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.49          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.50          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.60          42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.70          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.77          39   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.81          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.86          33   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.104         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.111         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.85.112         30   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.10          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.15          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.16          32   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.18          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.24          43   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.26          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.38          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.153.87.41          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.154.127.147        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.156.224.42         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.156.255.133        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.196.100.45         36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  104.238.137.154        31   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.150.147.234        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.150.147.249        50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.150.147.250        36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.182.226.60         41   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.182.226.177        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.182.226.241        38   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.182.230.66         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  107.182.230.184        41   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  108.177.9.109          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  108.177.10.188          4   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  111.241.119.98         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  113.53.197.83           8   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  113.161.177.116        11   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  114.47.164.171         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  115.59.62.225          20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  116.206.72.130         36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  116.206.72.138         37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  119.201.29.18          20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  125.25.124.211         45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  125.230.101.2          12   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  131.253.33.254         49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  134.170.179.93         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  134.170.179.106        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  134.170.179.199        35   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  142.93.189.44          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  142.250.8.108          29   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  143.204.157.15         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  143.204.160.54         29   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  146.88.240.4           33   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  149.12.217.226         27   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  149.154.175.50         20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  149.154.175.51         20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  149.154.175.54         20   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  151.73.1.248           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  151.101.184.193        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  151.139.128.14         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  157.185.176.101        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  159.89.120.146         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  159.203.201.23         27   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  159.203.201.234        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.254.192.100        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.254.195.12         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.254.195.30         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.254.195.38         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.255.38.124         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.255.38.125         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  162.255.38.148         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  163.171.227.250        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  169.254.255.255        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  170.106.81.129         45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.4.0.1               2   0800.27f3.4d67  ARPA   GigabitEthernet0/0/0.37
+Internet  172.4.0.254             -   6c5e.3bb3.6410  ARPA   GigabitEthernet0/0/0.37
+Internet  172.4.21.254           19   5057.a8bf.efe8  ARPA   GigabitEthernet0/0/0.36
+Internet  172.4.30.10           177   001c.4234.0682  ARPA   GigabitEthernet0/0/0.31
+Internet  172.4.30.11           182   38c9.8617.700a  ARPA   GigabitEthernet0/0/0.31
+Internet  172.4.31.1              0   000e.c6ab.1858  ARPA   GigabitEthernet0/0/0.31
+Internet  172.4.31.2            183   38c9.8617.700a  ARPA   GigabitEthernet0/0/0.31
+Internet  172.4.31.254            -   6c5e.3bb3.6410  ARPA   GigabitEthernet0/0/0.31
+Internet  172.4.38.1            224   a456.30d7.1741  ARPA   GigabitEthernet0/0/0.38
+Internet  172.4.38.254            -   6c5e.3bb3.6410  ARPA   GigabitEthernet0/0/0.38
+Internet  172.4.41.254           19   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.4.42.1             18   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.4.42.10             8   5057.a8bf.efe8  ARPA   GigabitEthernet0/0/0.36
+Internet  172.4.42.11            17   5057.a8bf.efe8  ARPA   GigabitEthernet0/0/0.36
+Internet  172.16.255.255         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.104.112.244         0   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.107.201.154        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.107.207.110        36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.107.207.162        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.107.207.190        37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.107.208.146        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.5.161          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.5.163          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.5.170          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.5.174          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.7.35           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.7.46           38   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.1           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.2           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.3           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.4           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.10          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.14          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.15.20          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  172.217.195.155        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.82.60.87           39   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.194.78.95          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.194.201.188        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.194.223.100         6   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.194.223.108        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.194.223.109        42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.212.252.245        33   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.244.217.43         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.244.217.89         50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.244.217.120        47   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  173.249.2.122           6   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  177.21.97.137           5   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  177.70.184.226          4   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  178.239.144.151        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  183.237.131.157        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.53.178.9           42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.57.167.29          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.153.198.150        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.7           40   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.11          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.21          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.25          11   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.34          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.38          21   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.42          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.156.73.49          22   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.175.93.18          27   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.175.93.104         10   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.175.93.105         50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.2           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.14          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.18          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.26          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.30          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.34          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.102         50   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.166         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.190         43   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.242         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.176.27.246         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.179.201.75         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.179.201.76         37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.179.203.17         37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  185.179.203.27         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  188.68.211.114         36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  188.246.226.71          2   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  189.206.11.232         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  189.206.11.234         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  189.206.11.235         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  189.206.11.240         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.5.5.241            11   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.5.6.30             45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.12.94.30           45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.33.4.12            11   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.33.14.30           45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.35.51.30           45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.36.148.17          11   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.42.93.30           10   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.43.172.30          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.48.79.30           45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.52.178.30          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.54.112.30          11   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.55.83.30           10   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.112.36.4           12   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.115.165.49         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.115.165.63         45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.115.165.122        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  192.168.0.9           224   2c54.2d8f.e888  ARPA   GigabitEthernet0/0/0.25
+Internet  192.168.0.10            -   6c5e.3bb3.6410  ARPA   GigabitEthernet0/0/0.25
+Internet  192.168.0.11          224   5057.a8bf.efe8  ARPA   GigabitEthernet0/0/0.25
+Internet  192.228.79.201         12   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  195.2.238.235           1   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  197.2.170.193          45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  198.50.158.152         33   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  198.163.39.74          40   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  199.7.91.13            12   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  202.12.27.33           12   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  202.29.57.103          40   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  203.195.123.132        36   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  203.195.123.140        51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  203.195.123.148        37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  204.79.197.200         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  204.79.197.222         42   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  204.79.197.254         49   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  205.185.216.42         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  206.189.177.133        45   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  206.190.154.244        37   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  208.64.200.105         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  209.95.50.243          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  209.95.50.245          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  209.141.43.166         41   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.6           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.10          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.13          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.16          30   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.35          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.40          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.193.46          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.217.3           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.217.4           51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.217.10          47   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.217.14          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  216.58.217.22          51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  220.70.77.11           19   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Internet  220.194.237.43         51   b838.6170.d980  ARPA   GigabitEthernet0/0/0.36
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+Sw_Guadalajara.barco.com
+                 Gig 0/0/0         171              S I   WS-C2960- Fas 0/1
+
+Total cdp entries displayed : 1
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show interfaces
+GigabitEthernet0/0/0 is up, line protocol is up 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6410 (bia 6c5e.3bb3.6410)
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  1., loopback not set
+  Keepalive not supported 
+  Full Duplex, 100Mbps, link type is auto, media type is RJ45
+  output flow-control is off, input flow-control is off
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 426182
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 22000 bits/sec, 18 packets/sec
+  5 minute output rate 22000 bits/sec, 11 packets/sec
+     5559434 packets input, 4549423175 bytes, 0 no buffer
+     Received 29094 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 83199 multicast, 0 pause input
+     5068307 packets output, 4115625798 bytes, 0 underruns
+     0 output errors, 0 collisions, 2 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+GigabitEthernet0/0/0.25 is up, line protocol is up 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6410 (bia 6c5e.3bb3.6410)
+  Description: l2l MPLS_GDL
+  Internet address is 192.168.0.10/29
+  MTU 1500 bytes, BW 20000 Kbit/sec, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  25.
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive not supported 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0/0.31 is up, line protocol is up 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6410 (bia 6c5e.3bb3.6410)
+  Description: usuarios1_GDL
+  Internet address is 172.4.31.254/23
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  31.
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive not supported 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0/0.36 is up, line protocol is up 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6410 (bia 6c5e.3bb3.6410)
+  Description: internet_GDL
+  Internet address is 10.40.72.158/24
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  36.
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive not supported 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0/0.37 is up, line protocol is up 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6410 (bia 6c5e.3bb3.6410)
+  Description: Servers
+  Internet address is 172.4.0.254/24
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  37.
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive not supported 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0/0.38 is up, line protocol is up 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6410 (bia 6c5e.3bb3.6410)
+  Description: admin switches_GDL
+  Internet address is 172.4.38.254/24
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation 802.1Q Virtual LAN, Vlan ID  38.
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Keepalive not supported 
+  Last clearing of "show interface" counters never
+GigabitEthernet0/0/1 is administratively down, line protocol is down 
+  Hardware is ISR4321-2x1GE, address is 6c5e.3bb3.6411 (bia 6c5e.3bb3.6411)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive not supported 
+  Full Duplex, 1000Mbps, link type is auto, media type is RJ45
+  output flow-control is on, input flow-control is on
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 1 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Serial0/1/0 is down, line protocol is down 
+  Hardware is NIM-2T
+  MTU 1500 bytes, BW 2000 Kbit/sec, DLY 20000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation HDLC, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 234 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions
+     RTS down, CTS up, DTR down, DCD up, DSR up
+Serial0/1/1 is down, line protocol is down 
+  Hardware is NIM-2T
+  MTU 1500 bytes, BW 2000 Kbit/sec, DLY 20000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation HDLC, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 234 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions
+     RTS down, CTS up, DTR down, DCD up, DSR up
+Serial0/2/0 is down, line protocol is down 
+  Hardware is NIM-2T
+  MTU 1500 bytes, BW 2000 Kbit/sec, DLY 20000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation HDLC, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 234 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions
+     RTS down, CTS up, DTR down, DCD up, DSR up
+Serial0/2/1 is down, line protocol is down 
+  Hardware is NIM-2T
+  MTU 1500 bytes, BW 2000 Kbit/sec, DLY 20000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation HDLC, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 234 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+     0 carrier transitions
+     RTS down, CTS up, DTR down, DCD up, DSR up
+GigabitEthernet0 is administratively down, line protocol is down 
+  Hardware is RP management port, address is 6c5e.3bb3.649f (bia 6c5e.3bb3.649f)
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Auto Duplex, Auto Speed, link type is auto, media type is RJ45
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ip interface brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0/0   unassigned      YES unset  up                    up      
+Gi0/0/0.25             192.168.0.10    YES manual up                    up      
+Gi0/0/0.31             172.4.31.254    YES manual up                    up      
+Gi0/0/0.36             10.40.72.158    YES DHCP   up                    up      
+Gi0/0/0.37             172.4.0.254     YES manual up                    up      
+Gi0/0/0.38             172.4.38.254    YES manual up                    up      
+GigabitEthernet0/0/1   unassigned      YES unset  administratively down down    
+Serial0/1/0            unassigned      YES unset  down                  down    
+Serial0/1/1            unassigned      YES unset  down                  down    
+Serial0/2/0            unassigned      YES unset  down                  down    
+Serial0/2/1            unassigned      YES unset  down                  down    
+GigabitEthernet0       unassigned      YES unset  administratively down down    
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ip eigrp interfaces
+EIGRP-IPv4 Interfaces for AS(1)
+                              Xmit Queue   PeerQ        Mean   Pacing Time   Multicast    Pending
+Interface              Peers  Un/Reliable  Un/Reliable  SRTT   Un/Reliable   Flow Timer   Routes
+Gi0/0/0.25               0        0/0       0/0           0       0/1           50           0
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ip eigrp neighbors
+EIGRP-IPv4 Neighbors for AS(1)
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ip nat translations
+Pro  Inside global         Inside local          Outside local         Outside global
+tcp  10.40.72.158:5234     172.4.31.2:55143      3.219.243.166:443     3.219.243.166:443
+tcp  10.40.72.158:5220     172.4.31.2:55168      172.217.15.10:443     172.217.15.10:443
+tcp  10.40.72.158:5171     172.4.31.2:55153      34.215.249.193:443    34.215.249.193:443
+tcp  10.40.72.158:5065     172.4.31.1:50698      172.217.15.3:443      172.217.15.3:443
+tcp  10.40.72.158:5068     172.4.31.2:54948      54.241.2.241:443      54.241.2.241:443
+tcp  10.40.72.158:5173     172.4.31.2:55042      216.58.193.40:443     216.58.193.40:443
+tcp  10.40.72.158:5138     172.4.31.2:54973      17.248.131.173:443    17.248.131.173:443
+tcp  10.40.72.158:5146     172.4.30.11:55189     72.246.85.29:443      72.246.85.29:443
+tcp  10.40.72.158:5245     172.4.31.2:55152      130.211.14.119:443    130.211.14.119:443
+tcp  10.40.72.158:5197     172.4.30.11:55193     104.244.42.69:443     104.244.42.69:443
+tcp  10.40.72.158:5184     172.4.31.2:55061      104.244.42.69:443     104.244.42.69:443
+tcp  10.40.72.158:5191     172.4.31.2:55131      17.248.131.171:443    17.248.131.171:443
+tcp  10.40.72.158:5529     172.4.31.1:58697      104.46.116.119:443    104.46.116.119:443
+tcp  10.40.72.158:5069     172.4.31.1:49827      52.242.211.89:443     52.242.211.89:443
+tcp  10.40.72.158:5218     172.4.31.2:55138      3.219.243.166:443     3.219.243.166:443
+tcp  10.40.72.158:5099     172.4.31.1:50043      64.233.168.109:993    64.233.168.109:993
+tcp  10.40.72.158:5235     172.4.31.2:55137      3.219.243.166:443     3.219.243.166:443
+tcp  10.40.72.158:5302     172.4.31.1:52435      17.248.185.103:443    17.248.185.103:443
+tcp  10.40.72.158:5250     172.4.31.1:58640      52.141.217.125:443    52.141.217.125:443
+tcp  10.40.72.158:5525     172.4.31.1:58694      108.177.10.188:5228   108.177.10.188:5228
+tcp  10.40.72.158:5207     172.4.30.11:55209     151.101.184.157:443   151.101.184.157:443
+tcp  10.40.72.158:5090     172.4.31.1:50193      64.233.168.109:993    64.233.168.109:993
+tcp  10.40.72.158:5120     172.4.31.2:55115      35.168.157.34:443     35.168.157.34:443
+tcp  10.40.72.158:5257     172.4.31.1:58642      23.44.169.183:443     23.44.169.183:443
+tcp  10.40.72.158:5187     172.4.31.2:55065      172.217.7.34:443      172.217.7.34:443
+tcp  10.40.72.158:5074     172.4.31.1:49710      151.101.2.49:443      151.101.2.49:443
+tcp  10.40.72.158:5251     172.4.31.1:51502      52.230.222.68:443     52.230.222.68:443
+tcp  10.40.72.158:5203     172.4.31.2:55071      216.58.217.4:443      216.58.217.4:443
+tcp  10.40.72.158:5170     172.4.31.2:55164      172.217.7.34:443      172.217.7.34:443
+tcp  10.40.72.158:5124     172.4.31.2:54943      34.228.154.163:443    34.228.154.163:443
+tcp  10.40.72.158:5238     172.4.31.2:55147      200.14.19.10:443      200.14.19.10:443
+udp  10.40.72.158:5120     172.4.31.1:65343      8.8.8.8:53            8.8.8.8:53
+tcp  10.40.72.158:5083     172.4.31.2:54974      104.16.47.63:443      104.16.47.63:443
+tcp  10.40.72.158:5101     172.4.31.1:49862      35.186.224.47:443     35.186.224.47:443
+tcp  10.40.72.158:5196     172.4.31.2:55133      104.73.3.118:443      104.73.3.118:443
+tcp  10.40.72.158:5195     172.4.31.2:55068      172.217.7.34:443      172.217.7.34:443
+tcp  10.40.72.158:5313     172.4.31.1:51888      40.97.120.34:993      40.97.120.34:993
+tcp  10.40.72.158:5160     172.4.30.11:55225     17.57.144.85:5223     17.57.144.85:5223
+tcp  10.40.72.158:5092     172.4.31.1:49904      108.177.10.188:5228   108.177.10.188:5228
+tcp  10.40.72.158:5530     172.4.31.1:58700      17.248.131.233:443    17.248.131.233:443
+tcp  10.40.72.158:5252     172.4.31.1:58644      23.44.169.183:443     23.44.169.183:443
+tcp  10.40.72.158:5194     172.4.31.2:55134      104.73.3.118:443      104.73.3.118:443
+tcp  10.40.72.158:5084     172.4.31.2:54935      143.204.153.63:443    143.204.153.63:443
+tcp  10.40.72.158:5262     172.4.31.1:58734      35.244.178.179:443    35.244.178.179:443
+tcp  10.40.72.158:5089     172.4.31.1:50092      142.93.189.44:443     142.93.189.44:443
+tcp  10.40.72.158:5066     172.4.31.1:50744      23.11.216.198:443     23.11.216.198:443
+tcp  10.40.72.158:5132     172.4.31.2:55117      17.57.144.84:5223     17.57.144.84:5223
+udp  10.40.72.158:5168     172.4.31.1:61102      172.217.15.14:443     172.217.15.14:443
+tcp  10.40.72.158:5178     172.4.31.2:55052      13.249.79.54:443      13.249.79.54:443
+tcp  10.40.72.158:5508     172.4.31.1:58675      142.93.189.44:443     142.93.189.44:443
+tcp  10.40.72.158:5189     172.4.31.2:55066      143.204.160.82:443    143.204.160.82:443
+tcp  10.40.72.158:5186     172.4.31.2:55064      74.119.118.138:443    74.119.118.138:443
+tcp  10.40.72.158:5260     172.4.31.1:58639      52.73.89.180:80       52.73.89.180:80
+tcp  10.40.72.158:5232     172.4.31.2:55140      31.13.89.35:443       31.13.89.35:443
+tcp  10.40.72.158:5079     172.4.31.2:54926      52.202.244.25:443     52.202.244.25:443
+tcp  10.40.72.158:5228     172.4.31.2:55109      151.101.185.7:443     151.101.185.7:443
+tcp  10.40.72.158:5157     172.4.31.2:55132      34.234.68.190:443     34.234.68.190:443
+tcp  10.40.72.158:5255     172.4.30.11:55256     35.167.34.112:443     35.167.34.112:443
+tcp  10.40.72.158:5126     172.4.31.2:54986      35.170.97.200:443     35.170.97.200:443
+tcp  10.40.72.158:5122     172.4.31.2:54933      35.170.97.200:443     35.170.97.200:443
+tcp  10.40.72.158:5165     172.4.30.11:55228     52.20.251.71:443      52.20.251.71:443
+tcp  10.40.72.158:5534     172.4.31.1:58704      17.253.3.209:80       17.253.3.209:80
+tcp  10.40.72.158:5227     172.4.31.2:55110      151.101.185.7:443     151.101.185.7:443
+tcp  10.40.72.158:5121     172.4.31.1:50125      35.244.178.179:443    35.244.178.179:443
+tcp  10.40.72.158:5139     172.4.31.2:55145      13.225.54.26:443      13.225.54.26:443
+tcp  10.40.72.158:5528     172.4.31.1:58699      17.57.144.84:5223     17.57.144.84:5223
+tcp  10.40.72.158:5214     172.4.31.2:55081      152.195.13.31:443     152.195.13.31:443
+tcp  10.40.72.158:5224     172.4.31.1:52750      17.57.144.84:5223     17.57.144.84:5223
+tcp  10.40.72.158:5216     172.4.30.11:55278     17.248.131.233:443    17.248.131.233:443
+tcp  10.40.72.158:5149     172.4.31.2:55157      172.217.5.162:443     172.217.5.162:443
+tcp  10.40.72.158:5212     172.4.30.11:55237     104.244.42.67:443     104.244.42.67:443
+tcp  10.40.72.158:5204     172.4.31.2:55072      172.217.5.163:443     172.217.5.163:443
+tcp  10.40.72.158:5063     172.4.31.1:49805      173.194.78.95:443     173.194.78.95:443
+tcp  10.40.72.158:5282     172.4.31.1:51688      17.248.185.135:443    17.248.185.135:443
+tcp  10.40.72.158:5151     172.4.31.2:55022      13.225.54.17:443      13.225.54.17:443
+udp  10.40.72.158:5126     172.4.31.1:55984      8.8.8.8:53            8.8.8.8:53
+tcp  10.40.72.158:5169     172.4.31.2:55163      104.19.148.8:443      104.19.148.8:443
+tcp  10.40.72.158:5294     172.4.31.1:51985      35.244.178.179:443    35.244.178.179:443
+tcp  10.40.72.158:5236     172.4.31.2:55144      52.206.100.192:443    52.206.100.192:443
+tcp  10.40.72.158:5070     172.4.31.2:54911      35.168.157.34:443     35.168.157.34:443
+tcp  10.40.72.158:5123     172.4.31.2:54985      17.248.131.137:443    17.248.131.137:443
+tcp  10.40.72.158:5267     172.4.31.1:51532      104.154.127.91:443    104.154.127.91:443
+tcp  10.40.72.158:5185     172.4.31.2:55063      172.217.5.162:443     172.217.5.162:443
+tcp  10.40.72.158:5167     172.4.31.2:55036      34.199.37.40:443      34.199.37.40:443
+tcp  10.40.72.158:5183     172.4.31.2:55166      172.217.5.163:443     172.217.5.163:443
+tcp  10.40.72.158:5242     172.4.31.2:55142      52.206.100.192:443    52.206.100.192:443
+tcp  10.40.72.158:5072     172.4.31.2:54915      3.211.114.83:443      3.211.114.83:443
+tcp  10.40.72.158:5286     172.4.31.1:51689      17.248.185.135:443    17.248.185.135:443
+tcp  10.40.72.158:5226     172.4.31.2:55101      17.248.141.100:443    17.248.141.100:443
+tcp  10.40.72.158:5300     172.4.31.1:52430      17.248.185.110:443    17.248.185.110:443
+tcp  10.40.72.158:5281     172.4.31.1:52551      173.194.78.95:443     173.194.78.95:443
+tcp  10.40.72.158:5535     172.4.31.1:58727      91.228.167.103:80     91.228.167.103:80
+tcp  10.40.72.158:5526     172.4.31.1:58695      20.36.219.28:443      20.36.219.28:443
+tcp  10.40.72.158:5174     172.4.31.2:55048      104.19.148.8:443      104.19.148.8:443
+tcp  10.40.72.158:5193     172.4.30.11:55192     104.244.42.67:443     104.244.42.67:443
+tcp  10.40.72.158:5206     172.4.31.2:55075      104.17.208.240:443    104.17.208.240:443
+tcp  10.40.72.158:5188     172.4.31.2:55167      104.17.208.240:443    104.17.208.240:443
+tcp  10.40.72.158:5248     172.4.31.1:58636      173.194.78.95:443     173.194.78.95:443
+tcp  10.40.72.158:5263     172.4.31.1:51528      64.233.169.188:5228   64.233.169.188:5228
+udp  10.40.72.158:512      172.4.0.1:67          172.4.42.10:68        172.4.42.10:68
+tcp  10.40.72.158:5254     172.4.30.11:55252     17.248.185.4:443      17.248.185.4:443
+udp  10.40.72.158:5158     172.4.31.1:63176      40.119.7.171:3544     40.119.7.171:3544
+tcp  10.40.72.158:5091     172.4.31.1:50641      35.186.224.53:443     35.186.224.53:443
+tcp  10.40.72.158:5166     172.4.31.2:55161      74.119.118.138:443    74.119.118.138:443
+tcp  10.40.72.158:5533     172.4.31.1:58703      17.253.3.209:80       17.253.3.209:80
+tcp  10.40.72.158:5062     172.4.31.1:50739      23.49.178.99:443      23.49.178.99:443
+tcp  10.40.72.158:5221     172.4.30.11:55334     17.248.131.229:443    17.248.131.229:443
+tcp  10.40.72.158:5240     172.4.31.2:55139      31.13.89.35:443       31.13.89.35:443
+udp  10.40.72.158:5158     172.4.31.1:63176      40.119.7.170:3544     40.119.7.170:3544
+tcp  10.40.72.158:5152     172.4.31.2:55023      216.58.193.42:443     216.58.193.42:443
+tcp  10.40.72.158:5241     172.4.31.2:55149      13.225.54.26:443      13.225.54.26:443
+tcp  10.40.72.158:5081     172.4.31.2:54928      104.16.48.63:443      104.16.48.63:443
+tcp  10.40.72.158:5148     172.4.31.2:55125      17.248.131.200:443    17.248.131.200:443
+tcp  10.40.72.158:5504     172.4.31.1:58750      216.58.193.10:443     216.58.193.10:443
+tcp  10.40.72.158:5247     172.4.30.11:55295     104.18.166.96:443     104.18.166.96:443
+tcp  10.40.72.158:5217     172.4.31.2:55136      200.14.19.10:443      200.14.19.10:443
+tcp  10.40.72.158:5205     172.4.31.2:55073      104.244.42.3:443      104.244.42.3:443
+tcp  10.40.72.158:5137     172.4.31.2:54997      35.167.34.112:443     35.167.34.112:443
+tcp  10.40.72.158:5131     172.4.31.2:54947      52.9.241.102:443      52.9.241.102:443
+tcp  10.40.72.158:5531     172.4.31.1:58701      17.248.131.233:443    17.248.131.233:443
+tcp  10.40.72.158:5244     172.4.31.2:55151      151.101.184.157:443   151.101.184.157:443
+tcp  10.40.72.158:5180     172.4.31.2:55165      216.58.217.4:443      216.58.217.4:443
+tcp  10.40.72.158:5256     172.4.31.1:58621      23.49.178.99:443      23.49.178.99:443
+udp  10.40.72.158:5180     172.4.31.1:61614      172.217.15.14:443     172.217.15.14:443
+tcp  10.40.72.158:5077     172.4.31.2:54929      35.167.34.112:443     35.167.34.112:443
+tcp  10.40.72.158:5237     172.4.31.2:55146      200.14.19.10:443      200.14.19.10:443
+tcp  10.40.72.158:5076     172.4.31.2:54918      17.248.131.140:443    17.248.131.140:443
+tcp  10.40.72.158:5190     172.4.31.2:55128      17.248.185.170:443    17.248.185.170:443
+tcp  10.40.72.158:5172     172.4.31.2:55040      151.101.184.157:443   151.101.184.157:443
+tcp  10.40.72.158:5259     172.4.31.1:52457      54.228.209.74:443     54.228.209.74:443
+tcp  10.40.72.158:5175     172.4.30.11:55229     35.168.157.34:443     35.168.157.34:443
+tcp  10.40.72.158:5078     172.4.31.2:54930      35.167.34.112:443     35.167.34.112:443
+tcp  10.40.72.158:5162     172.4.30.11:55226     35.170.97.200:443     35.170.97.200:443
+tcp  10.40.72.158:5280     172.4.31.1:51885      172.217.195.109:993   172.217.195.109:993
+tcp  10.40.72.158:5258     172.4.31.1:58643      23.44.169.183:443     23.44.169.183:443
+tcp  10.40.72.158:5128     172.4.31.2:54949      52.9.241.102:443      52.9.241.102:443
+tcp  10.40.72.158:5082     172.4.31.2:54932      13.249.66.214:443     13.249.66.214:443
+tcp  10.40.72.158:5150     172.4.31.2:55158      34.215.249.193:443    34.215.249.193:443
+tcp  10.40.72.158:5135     172.4.31.2:55120      3.211.114.83:443      3.211.114.83:443
+tcp  10.40.72.158:5093     172.4.31.1:50027      64.233.168.109:993    64.233.168.109:993
+tcp  10.40.72.158:5125     172.4.31.1:50096      40.97.120.146:993     40.97.120.146:993
+tcp  10.40.72.158:5158     172.4.31.2:55159      18.185.216.165:443    18.185.216.165:443
+tcp  10.40.72.158:5264     172.4.31.1:58629      108.177.10.188:5228   108.177.10.188:5228
+tcp  10.40.72.158:5155     172.4.31.2:55026      143.204.160.54:443    143.204.160.54:443
+tcp  10.40.72.158:5176     172.4.31.2:55050      130.211.14.119:443    130.211.14.119:443
+tcp  10.40.72.158:5130     172.4.31.2:54950      54.241.2.241:443      54.241.2.241:443
+tcp  10.40.72.158:5129     172.4.31.1:49506      104.20.185.68:443     104.20.185.68:443
+tcp  10.40.72.158:545      172.4.31.254:23       172.4.42.1:48816      172.4.42.1:48816
+tcp  10.40.72.158:5532     172.4.31.1:58705      52.114.128.8:443      52.114.128.8:443
+tcp  10.40.72.158:5249     172.4.31.1:51771      172.217.195.109:993   172.217.195.109:993
+tcp  10.40.72.158:5219     172.4.31.2:55169      172.217.15.10:443     172.217.15.10:443
+tcp  10.40.72.158:5098     172.4.31.1:49860      104.154.127.93:443    104.154.127.93:443
+tcp  10.40.72.158:5192     172.4.30.11:55188     72.246.85.29:443      72.246.85.29:443
+tcp  10.40.72.158:5161     172.4.31.1:49934      17.57.144.87:5223     17.57.144.87:5223
+tcp  10.40.72.158:5253     172.4.31.1:58577      23.44.168.195:443     23.44.168.195:443
+tcp  10.40.72.158:5182     172.4.31.2:55154      18.185.216.165:443    18.185.216.165:443
+Total number of translations: 156
+
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+S*    0.0.0.0/0 is directly connected, GigabitEthernet0/0/0.36
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+C        10.40.72.0/24 is directly connected, GigabitEthernet0/0/0.36
+L        10.40.72.158/32 is directly connected, GigabitEthernet0/0/0.36
+L        10.40.72.212/32 is directly connected, GigabitEthernet0/0/0.36
+      172.4.0.0/16 is variably subnetted, 6 subnets, 3 masks
+C        172.4.0.0/24 is directly connected, GigabitEthernet0/0/0.37
+L        172.4.0.254/32 is directly connected, GigabitEthernet0/0/0.37
+C        172.4.30.0/23 is directly connected, GigabitEthernet0/0/0.31
+L        172.4.31.254/32 is directly connected, GigabitEthernet0/0/0.31
+C        172.4.38.0/24 is directly connected, GigabitEthernet0/0/0.38
+L        172.4.38.254/32 is directly connected, GigabitEthernet0/0/0.38
+      192.168.0.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.0.8/29 is directly connected, GigabitEthernet0/0/0.25
+L        192.168.0.10/32 is directly connected, GigabitEthernet0/0/0.25
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show mac-address-table
+                    ^
+% Invalid input detected at '^' marker.
+
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ntp status
+Clock is synchronized, stratum 4, reference is 10.40.72.254   
+nominal freq is 250.0000 Hz, actual freq is 250.0095 Hz, precision is 2**10
+ntp uptime is 1389500 (1/100 of seconds), resolution is 4000
+reference time is E17B1440.8F1AA148 (00:35:12.559 UTC Sun Nov 17 2019)
+clock offset is -5.4168 msec, root delay is 44.69 msec
+root dispersion is 125.00 msec, peer dispersion is 1.97 msec
+loopfilter state is 'CTRL' (Normal Controlled Loop), drift is -0.000038306 s/s
+system poll interval is 128, last update was 128 sec ago.
+Guadalajara#
+---------------------------------------------------------------------------------------------
+show ip dhcp binding
+Bindings from all pools not associated with VRF:
+IP address      Client-ID/ 		Lease expiration 	Type       State      Interface
+		Hardware address/
+		User name
+Guadalajara#
+---------------------------------------------------------------------------------------------

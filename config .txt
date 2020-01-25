@@ -1,0 +1,622 @@
+
+b
+(
+##################################################
+b
+(
+ Unauthorized access to this device is prohibited
+b
+(
+##################################################
+b
+(
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >
+        |#'     `..'`..'          `###'        x:      /     /
+         \                                   xXX|     /    ./
+          \                                xXXX'|    /   ./
+          /`-.                                  `.  /   /
+         :    `-  ...........,                   | /  .'
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+                                   `:.:'
+
+
+
+
+Guadalajara#
+
+Guadalajara#
+Guadalajara#
+Guadalajara#
+Guadalajara#
+Guadalajara#
+Guadalajara#sh run
+Guadalajara#sh running-config
+Building configuration...
+
+
+Current configuration : 8239 bytes
+!
+! Last configuration change at 22:04:27 UTC Sat Nov 16 2019 by cisco
+!
+version 16.9
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+!
+hostname Guadalajara
+!
+boot-start-marker
+boot-end-marker
+!
+!
+vrf definition Mgmt-intf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+enable password 7 0822455D0A16
+!
+no aaa new-model
+!
+no ip domain lookup
+ip domain name barco.com
+!
+ip dhcp pool webuidhcp
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+!
+!
+!
+!
+!
+ipv6 unicast-routing
+multilink bundle-name authenticated
+!
+!
+!
+crypto pki trustpoint TP-self-signed-3849337002
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-3849337002
+ revocation-check none
+ rsakeypair TP-self-signed-3849337002
+!
+!
+crypto pki certificate chain TP-self-signed-3849337002
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+  69666963 6174652D 33383439 33333730 3032301E 170D3139 31313136 32303431
+  30345A17 0D333030 31303130 30303030 305A3031 312F302D 06035504 03132649
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D33 38343933
+  33373030 32308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201
+  0A028201 0100B4F6 294983B6 F71CA153 FCFB9863 7EB5E786 A1DD4D89 702275F6
+  7FD4F168 DD7A8A15 E5518F8D 9127924C 17CB6B32 1A6D014C 8056BD5C FD4D8CFD
+  C4B8D68A C32831B0 86ACDFA8 D065B2E7 D0099CF5 E9AD2602 32B878D5 F8B3AE54
+  0C088A49 2A81EEC0 73922BE1 4F14E174 C0C88EF2 A0094C9C 0928B724 FC731D2D
+  21FE07E0 A7B1B372 B2F34FDE 9AC3612D 2A938D79 501A995E 65FFF653 CB76C666
+  D63827BB CDFC2AAB A45637BF E0C468D0 E2BB4049 1C6F7386 0EA2ECEC 38097821
+  B643A73A 4D024162 D8F64172 89B010B6 135E549E 2A10EF8C CCC20C96 3353BBA7
+  9648E128 688C321B 7D56A869 932AD681 AED994A8 60A60746 CC8333F9 C5D05972
+  3715E620 58E90203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF
+  301F0603 551D2304 18301680 14963F17 66F0C67A BC50776B 84BAA534 9C75453F
+  6F301D06 03551D0E 04160414 963F1766 F0C67ABC 50776B84 BAA5349C 75453F6F
+  300D0609 2A864886 F70D0101 05050003 82010100 6E1C7D33 668184CB AA033395
+  1D7CF57D 11D35730 964D2122 0903D0CE 99BD8270 CC52BEBB 3246E1E0 E8E47D02
+  27A4EA56 468BA14B 1966BB0C E7775EC0 56E82E12 A264ACD3 B106EFB4 560E31FD
+  50C5AEB5 BD8ED7A9 6F5A0A7F 830B785A 165EF25E F7A85F70 0E563FD9 B804D26E
+  CBEC76F8 23D0C870 87D99C47 CD667F55 6D01A0A1 546CE857 EE1C5F08 D461B0DF
+  6FF8D916 5A90F32F 52E01D45 22F7985D 271BEFA0 4222A6FD 50F9F499 764B7F0D
+  FCF8CE65 6EC1C28A 62AAEB06 23C7FF7D 064D4612 A28AEAF2 AEDCFD53 E4A55CEF
+  99B60B12 3B570CBE 5C760BF5 9D7C2CDA 19AA4399 DAA4A849 68FB43F2 23042E42
+  16226E3A 593DD0B0 C54214E7 33F680D0 90BE6711
+        quit
+!
+license udi pid ISR4321/K9 sn FLM2327015P
+no license smart enable
+diagnostic bootup level minimal
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+username cisco privilege 5 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+username cisco1 privilege 15 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+lldp run
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/0.25
+ description l2l MPLS_GDL
+ encapsulation dot1Q 25
+ ip address 192.168.0.10 255.255.255.248
+ ipv6 address dhcp
+ ipv6 address autoconfig
+ ipv6 enable
+ ipv6 dhcp client request vendor
+!
+interface GigabitEthernet0/0/0.31
+ description usuarios1_GDL
+ encapsulation dot1Q 31
+ ip address 172.4.31.254 255.255.254.0
+ ip helper-address 172.4.0.1
+ ip nat inside
+ ip access-group 100 in
+!
+interface GigabitEthernet0/0/0.36
+ description internet_GDL
+ encapsulation dot1Q 36
+ ip address 10.40.72.158 255.255.255.0
+ ip nat outside
+!
+interface GigabitEthernet0/0/0.37
+ description Servers
+ encapsulation dot1Q 37
+ ip address 172.4.0.254 255.255.255.0
+ ip nat inside
+!
+interface GigabitEthernet0/0/0.38
+ description admin switches_GDL
+ encapsulation dot1Q 38
+ ip address 172.4.38.254 255.255.255.0
+!
+interface GigabitEthernet0/0/1
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface Serial0/1/0
+ no ip address
+!
+interface Serial0/1/1
+ no ip address
+!
+interface Serial0/2/0
+ no ip address
+!
+interface Serial0/2/1
+ no ip address
+!
+interface GigabitEthernet0
+ vrf forwarding Mgmt-intf
+ no ip address
+ shutdown
+ negotiation auto
+!
+!
+router eigrp 1
+ network 172.4.0.0
+ network 192.168.0.0
+ passive-interface default
+ no passive-interface GigabitEthernet0/0/0.25
+!
+ip nat inside source list 1 interface GigabitEthernet0/0/0.36 overload
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip tftp source-interface GigabitEthernet0
+ip route 0.0.0.0 0.0.0.0 GigabitEthernet0/0/0.36
+!
+ip ssh version 2
+!
+logging host 172.4.31.1
+access-list 1 remark ACL nat
+access-list 1 permit 172.4.30.0 0.0.1.255
+access-list 1 permit 172.4.0.0 0.0.0.255
+access-list 100 remark ACL Rocket league
+access-list 100 deny   tcp 10.0.2.0 0.0.0.255 any eq 1935 time-range redes2
+access-list 100 deny   tcp 10.0.2.0 0.0.0.255 any range 3480 3748 time-range redes2
+access-list 100 deny   tcp 10.0.2.0 0.0.0.255 any eq 3074 time-range redes2
+access-list 100 deny   tcp 10.0.2.0 0.0.0.255 any range 3478 3479 time-range redes2
+access-list 100 deny   tcp 10.0.2.0 0.0.0.255 any range 7000 9000 time-range redes2
+access-list 100 permit ip any any
+!
+!
+!
+!
+control-plane
+!
+banner motd ^C
+b
+(
+##################################################
+b
+(
+ Unauthorized access to this device is prohibited
+b
+(
+##################################################
+b
+(
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >
+        |#'     `..'`..'          `###'        x:      /     /
+         \                                   xXX|     /    ./
+          \                                xXXX'|    /   ./
+          /`-.                                  `.  /   /
+         :    `-  ...........,                   | /  .'
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+                                   `:.:'
+
+^C
+!
+line con 0
+ exec-timeout 5 0
+ login local
+ transport input none
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ exec-timeout 5 0
+ login local
+line vty 5 15
+ exec-timeout 5 0
+ login local
+!
+ntp server 10.40.72.254
+time-range redes2
+ periodic weekend 15:00 to 22:00
+!
+!
+!
+!
+!
+!
+end
+
+Guadalajara# sh acce
+Guadalajara# sh access-
+% Ambiguous command:  " sh access-"
+Guadalajara#
+
+Guadalajara#sh acce
+Guadalajara#sh access-l
+Guadalajara#sh access-lists
+Standard IP access list 1
+    10 permit 172.4.30.0, wildcard bits 0.0.1.255
+    20 permit 172.4.0.0, wildcard bits 0.0.0.255
+Extended IP access list 100
+    10 deny tcp 10.0.2.0 0.0.0.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 10.0.2.0 0.0.0.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 10.0.2.0 0.0.0.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 10.0.2.0 0.0.0.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 10.0.2.0 0.0.0.255 any range 7000 9000 time-range redes2 (inactive)
+    60 permit ip any any (2015640 matches)
+Guadalajara#sh ip r
+Guadalajara#sh ip ro
+Guadalajara#sh ip route 10.0.2.0
+% Subnet not in table
+Guadalajara#sh
+Guadalajara#show ip ei
+Guadalajara#show ip eigrp
+% Incomplete command.
+
+Guadalajara#sh
+Guadalajara#show ip e
+Guadalajara#show ip ei
+Guadalajara#show ip eigrp n
+Guadalajara#show ip eigrp neighbors
+EIGRP-IPv4 Neighbors for AS(1)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+1   192.168.0.11            Gi0/0/0.25               11 02:27:58    2   100  0  57
+0   192.168.0.9             Gi0/0/0.25               11 02:27:58    2   100  0  58
+Guadalajara#
+
+Guadalajara#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+S*    0.0.0.0/0 is directly connected, GigabitEthernet0/0/0.36
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+C        10.40.72.0/24 is directly connected, GigabitEthernet0/0/0.36
+L        10.40.72.158/32 is directly connected, GigabitEthernet0/0/0.36
+L        10.40.72.212/32 is directly connected, GigabitEthernet0/0/0.36
+      172.4.0.0/16 is variably subnetted, 12 subnets, 3 masks
+C        172.4.0.0/24 is directly connected, GigabitEthernet0/0/0.37
+L        172.4.0.254/32 is directly connected, GigabitEthernet0/0/0.37
+D        172.4.21.0/24
+           [90/30720] via 192.168.0.9, 02:28:56, GigabitEthernet0/0/0.25
+D        172.4.22.0/24
+           [90/30720] via 192.168.0.9, 02:28:56, GigabitEthernet0/0/0.25
+D        172.4.28.0/24
+           [90/30720] via 192.168.0.9, 02:28:56, GigabitEthernet0/0/0.25
+C        172.4.30.0/23 is directly connected, GigabitEthernet0/0/0.31
+L        172.4.31.254/32 is directly connected, GigabitEthernet0/0/0.31
+C        172.4.38.0/24 is directly connected, GigabitEthernet0/0/0.38
+L        172.4.38.254/32 is directly connected, GigabitEthernet0/0/0.38
+D        172.4.40.0/23
+           [90/28416] via 192.168.0.11, 02:28:56, GigabitEthernet0/0/0.25
+D        172.4.42.0/23
+           [90/28416] via 192.168.0.11, 02:28:56, GigabitEthernet0/0/0.25
+D        172.4.48.0/24
+           [90/28416] via 192.168.0.11, 02:28:56, GigabitEthernet0/0/0.25
+      192.168.0.0/24 is variably subnetted, 3 subnets, 2 masks
+D        192.168.0.0/29
+           [90/30720] via 192.168.0.9, 02:28:56, GigabitEthernet0/0/0.25
+C        192.168.0.8/29 is directly connected, GigabitEthernet0/0/0.25
+L        192.168.0.10/32 is directly connected, GigabitEthernet0/0/0.25
+
+
+
+
+interface GigabitEthernet0/0/0.25
+
+!
+username cisco privilege 5 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+username cisco1 privilege 15 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+redundancy
+ mode none
+!
+!
+!
+!
+!
+!
+lldp run
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet0/0/0.25
+ description l2l MPLS_GDL
+ encapsulation dot1Q 25
+ ip address 192.168.0.10 255.255.255.248
+ ipv6 address dhcp
+ ipv6 address autoconfig
+ ipv6 enable
+ ipv6 dhcp client request vendor
+!
+interface GigabitEthernet0/0/0.31
+ description usuarios1_GDL
+ encapsulation dot1Q 31
+ ip address 172.4.31.254 255.255.254.0
+ ip helper-address 172.4.0.1
+ ip nat inside
+ ip access-group 100 in
+ ipv6 address dhcp
+ ipv6 address autoconfig
+ ipv6 enable
+ ipv6 dhcp client request vendor
+!
+interface GigabitEthernet0/0/0.36
+ description internet_GDL
+ encapsulation dot1Q 36
+ ip address 10.40.72.158 255.255.255.0
+ ip nat outside
+ ipv6 address dhcp
+ ipv6 address autoconfig
+ ipv6 enable
+
+Guadalajara#conf ter
+Enter configuration commands, one per line.  End with CNTL/Z.
+Guadalajara(config)#interface GigabitEthernet0/0/0.25
+Guadalajara(config-subif)#ba
+Guadalajara(config-subif)#ban
+Guadalajara(config-subif)#bandwidth ?
+  <1-200000000>  Bandwidth in kilobits
+  qos-reference  Reference bandwidth for QOS
+  receive        Specify receive-side bandwidth
+
+Guadalajara(config-subif)#bandwidth 20000
+Guadalajara(config-subif)#end
+Guadalajara#sh ip ro
+Guadalajara#sh ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+S*    0.0.0.0/0 is directly connected, GigabitEthernet0/0/0.36
+      10.0.0.0/8 is variably subnetted, 3 subnets, 2 masks
+C        10.40.72.0/24 is directly connected, GigabitEthernet0/0/0.36
+L        10.40.72.158/32 is directly connected, GigabitEthernet0/0/0.36
+L        10.40.72.212/32 is directly connected, GigabitEthernet0/0/0.36
+      172.4.0.0/16 is variably subnetted, 12 subnets, 3 masks
+C        172.4.0.0/24 is directly connected, GigabitEthernet0/0/0.37
+L        172.4.0.254/32 is directly connected, GigabitEthernet0/0/0.37
+D        172.4.21.0/24
+           [90/133120] via 192.168.0.9, 00:00:06, GigabitEthernet0/0/0.25
+D        172.4.22.0/24
+           [90/133120] via 192.168.0.9, 00:00:06, GigabitEthernet0/0/0.25
+D        172.4.28.0/24
+           [90/133120] via 192.168.0.9, 00:00:06, GigabitEthernet0/0/0.25
+C        172.4.30.0/23 is directly connected, GigabitEthernet0/0/0.31
+L        172.4.31.254/32 is directly connected, GigabitEthernet0/0/0.31
+C        172.4.38.0/24 is directly connected, GigabitEthernet0/0/0.38
+L        172.4.38.254/32 is directly connected, GigabitEthernet0/0/0.38
+D        172.4.40.0/23
+           [90/130816] via 192.168.0.11, 00:00:06, GigabitEthernet0/0/0.25
+D        172.4.42.0/23
+           [90/130816] via 192.168.0.11, 00:00:06, GigabitEthernet0/0/0.25
+D        172.4.48.0/24
+           [90/130816] via 192.168.0.11, 00:00:06, GigabitEthernet0/0/0.25
+      192.168.0.0/24 is variably subnetted, 3 subnets, 2 masks
+D        192.168.0.0/29
+           [90/133120] via 192.168.0.9, 00:00:06, GigabitEthernet0/0/0.25
+C        192.168.0.8/29 is directly connected, GigabitEthernet0/0/0.25
+L        192.168.0.10/32 is directly connected, GigabitEthernet0/0/0.25
+Guadalajara#sh
+Guadalajara#show ip ei
+Guadalajara#show ip eigrp n
+Guadalajara#show ip eigrp neighbors
+EIGRP-IPv4 Neighbors for AS(1)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+1   192.168.0.11            Gi0/0/0.25               13 02:31:46    2   100  0  57
+0   192.168.0.9             Gi0/0/0.25               14 02:31:46    2   100  0  58
+Guadalajara#
+
+
+Guadalajara# sh access-lists
+Standard IP access list 1
+    10 permit 172.4.30.0, wildcard bits 0.0.1.255
+    20 permit 172.4.0.0, wildcard bits 0.0.0.255
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (inactive)
+    60 permit ip any any (15187 matches)
+Guadalajara#
+
+interface GigabitEthernet0/0/0.31
+ description usuarios1_GDL
+ encapsulation dot1Q 31
+ ip address 172.4.31.254 255.255.254.0
+ ip helper-address 172.4.0.1
+ ip nat inside
+ ip access-group 100 in
+ ipv6 address dhcp
+ ipv6 address autoconfig
+ ipv6 enable
+ ipv6 dhcp client request vendor
+!
+interface GigabitEthernet0/0/0.36
+ description internet_GDL
+ encapsulation dot1Q 36
+ ip address 10.40.72.158 255.255.255.0
+ ip nat outside
+ ipv6 address dhcp
+ ipv6 address autoconfig
+
+Guadalajara#sh clo
+Guadalajara#sh clock
+.23:24:48.758 UTC Sat Nov 16 2019
+Guadalajara#
+
+
+

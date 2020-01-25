@@ -1,0 +1,1495 @@
+
+b
+(
+##################################################
+b
+(
+ Unauthorized access to this device is prohibited
+b
+(
+##################################################
+b
+(
+ $$$b  `---.__
+  "$$b        `--.                          ___.---uuudP
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+     "$b          -'            `-.-'            $$$"              .'|
+       ".                                       d$"             _.'  |
+         `.   /                              ..."             .'     |
+           `./                           ..::-'            _.'       |
+            /                         .:::-'            .-'         .'
+           :                          ::''\          _.'            |
+          .' .-.             .-.           `.      .'               |
+          : /'$$|           .@"$\           `.   .'              _.-'
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+         :                  `"--'             |    `-.     \
+        :##.       ==             .###.       `.      `.    `\
+        |##:                      :###:        |        >     >
+        |#'     `..'`..'          `###'        x:      /     /
+         \                                   xXX|     /    ./
+          \                                xXXX'|    /   ./
+          /`-.                                  `.  /   /
+         :    `-  ...........,                   | /  .'
+         |         ``:::::::'       .            |<    `.
+         |             ```          |           x| \ `.:``.
+         |                         .'    /'   xXX|  `:`M`M':.
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+         `.  .'                   :    /:'       |-'MMMM.-'
+          |  |                   .'   /'        .'MMM.-'
+          `'`'                   :  ,'          |MMM<
+            |                     `'            |tbap\
+             \                                  :MM.-'
+              \                 |              .''
+               \.               `.            /
+                /     .:::::::.. :           /
+               |     .:::::::::::`.         /
+               |   .:::------------\       /
+              /   .''               >::'  /
+              `',:                 :    .'
+                                   `:.:'
+
+
+
+
+Guadalajara#
+Guadalajara#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Guadalajara(config)#show logs
+                      ^
+% Invalid input detected at '^' marker.
+
+Guadalajara(config)#exit
+Guadalajara#show l
+Guadalajara#show lo
+Guadalajara#show log
+Guadalajara#show logs
+Guadalajara#show logs
+                    ^
+% Invalid input detected at '^' marker.
+
+Guadalajara#
+Guadalajara#show log
+Syslog logging: enabled (0 messages dropped, 2 messages rate-limited, 0 flushes,                                                                                                              0 overruns, xml disabled, filtering disabled)
+
+No Active Message Discriminator.
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: level debugging, 407 messages logged, xml disabled,
+                     filtering disabled
+    Monitor logging: level debugging, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level debugging, 408 messages logged, xml disabled,
+                    filtering disabled
+    Exception Logging: size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    Persistent logging: disabled
+
+No active filter modules.
+
+    Trap logging: level informational, 122 message lines logged
+ --More--
+        Logging to 172.4.31.1  (udp port 514, audit disabled,
+              link up),
+              47 message lines logged,
+              0 message lines rate-limited,
+              0 message lines dropped-by-MD,
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging Source-Interface:       VRF Name:
+
+Log Buffer (4096 bytes):
+ov 16 23:26:01.117: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+Nov 16 23:26:37.139: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+Nov 16 23:27:13.132: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+Nov 16 23:27:49.135: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:28:25.130: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:29:01.131: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:29:37.131: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:30:13.131: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:30:49.143: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:31:25.162: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:32:01.186: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:32:37.179: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:33:13.185: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:33:49.180: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:34:10.402: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: cisco1] [Source: 172.4.42.1] [localport: 23] at 23:34:10 UTC Sat Nov 1
+.Nov 16 23:34:25.183: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:34:32.073: %SYS-5-CONFIG_I: Configured from console by cisco1 on vty0 (172.4.42.1)
+.Nov 16 23:35:01.194: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:35:37.214: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:36:13.238: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:36:49.244: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:37:25.244: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:38:01.243: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:38:37.241: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:39:13.252: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:39:49.248: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:40:25.257: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:41:01.253: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:41:37.253: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:42:13.271: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:42:49.257: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:43:25.267: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:44:01.264: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:44:24.878: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: cisco1] [Source: 172.4.42.1] [localport: 23] at 23:44:24 UTC Sat Nov 1
+.Nov 16 23:44:33.192: %SYS-2-PRIVCFG_ENCRYPT: Successfully encrypted private config file
+.Nov 16 23:44:37.269: AUTOINSTALL: GigabitEthernet0/0/0.36 releasing DHCP ip address 10.40.72.158
+.Nov 16 23:44:46.247: %PNP-6-PNP_DISCOVERY_STOPPED: PnP Discovery stopped (Startup Config Present)
+.Nov 16 23:45:56.847: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: cisco1] [Source: 172.4.31.1] [localport: 22] at 23:45:56 UTC Sat Nov 1
+Nov 16 23:52:54.883: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: cisco1] [Source: 172.4.31.1] [localport: 22] at 23:52:54 UTC Sat Nov 16
+Nov 16 23:53:02.094: %SYS-5-CONFIG_I: Configured from console by cisco1 on vty2 (172.4.31.1)
+Guadalajara# show acce
+Guadalajara# show access-l
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (inactive)
+    60 permit ip any any (114971 matches)
+Guadalajara#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Guadalajara(config)#clock
+Guadalajara(config)#clock ?
+  calendar-valid  Calendar time is authoritative
+  summer-time     Configure summer (daylight savings) time
+  timezone        Configure time zone
+
+Guadalajara(config)#show clock
+                      ^
+% Invalid input detected at '^' marker.
+
+Guadalajara(config)#exit
+Guadalajara#show clock
+23:54:23.388 UTC Sat Nov 16 2019
+Guadalajara#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Guadalajara(config)#clock timezone utc-6
+% Incomplete command.
+
+Guadalajara(config)#clock timezone utc-8
+% Incomplete command.
+
+Guadalajara(config)#clock timezone utc
+Guadalajara(config)#clock timezone utc
+Guadalajara(config)#clock timezone utc8
+% Incomplete command.
+
+Guadalajara(config)#clock timezone u
+Guadalajara(config)#clock timezone u
+Guadalajara(config)#clock timezone ?
+  WORD  name of time zone
+
+Guadalajara(config)#clock timezone
+% Incomplete command.
+
+Guadalajara(config)#clock timezone UTC
+% Incomplete command.
+
+Guadalajara(config)#clock timezone UTC8
+% Incomplete command.
+
+Guadalajara(config)#clock timezone UTC-8
+% Incomplete command.
+
+Guadalajara(config)#ntp
+Guadalajara(config)#ntp
+Guadalajara(config)#ntp se
+Guadalajara(config)#ntp server
+% Incomplete command.
+
+Guadalajara(config)#ntp server 10.40.72.254
+Guadalajara(config)#exit
+Guadalajara#show clock
+23:55:26.579 UTC Sat Nov 16 2019
+Guadalajara#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Guadalajara(config)#clock timezone gmt
+% Incomplete command.
+
+Guadalajara(config)#clock set 17:56:00 16 nov 2019
+                           ^
+% Invalid input detected at '^' marker.
+
+Guadalajara(config)#exit
+Guadalajara#clock set 17:57:00 16 nov 2019
+Guadalajara#show clock
+.17:57:04.416 UTC Sat Nov 16 2019
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (1 match)
+    60 permit ip any any (123673 matches)
+Guadalajara#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Guadalajara#
+Guadalajara#
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (inactive) (7 matches)
+    60 permit ip any any (136049 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (inactive) (7 matches)
+    60 permit ip any any (136049 matches)
+Guadalajara#show clocj
+                     ^
+% Invalid input detected at '^' marker.
+
+Guadalajara#show clock
+.23:58:54.663 UTC Sat Nov 16 2019
+Guadalajara#clock set 17:57:00 16 nov 2019
+Guadalajara#show clock
+.17:57:01.197 UTC Sat Nov 16 2019
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (7 matches)
+    60 permit ip any any (137197 matches)
+Guadalajara#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ show access-lists 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (143295 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (143295 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (143295 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (143295 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara#show clock
+.17:58:30.743 UTC Sat Nov 16 2019
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara#
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (144156 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (145441 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (active)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (active)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (active)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (active)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (active) (13 matches)
+    60 permit ip any any (145441 matches)
+Guadalajara# show access-lists 100
+Extended IP access list 100
+    10 deny tcp 172.4.30.0 0.0.1.255 any eq 1935 time-range redes2 (inactive)
+    20 deny tcp 172.4.30.0 0.0.1.255 any range 3480 3748 time-range redes2 (inactive)
+    30 deny tcp 172.4.30.0 0.0.1.255 any eq 3074 time-range redes2 (inactive)
+    40 deny tcp 172.4.30.0 0.0.1.255 any range 3478 3479 time-range redes2 (inactive)
+    50 deny tcp 172.4.30.0 0.0.1.255 any range 7000 9000 time-range redes2 (inactive) (31 matches)
+    60 permit ip any any (148642 matches)
+Guadalajara#show clock
+.00:02:32.452 UTC Sun Nov 17 2019
+Guadalajara#
