@@ -148,7 +148,7 @@ print("d es: ",d)
 R1 = """hostname Manzanillo
 no ip domain-lookup
 
-ip domain-name barco.com
+ip domain-name example.com
 Crypto key generate rsa
 
 1024
@@ -226,13 +226,13 @@ access-list 1 permit 172.4.12.0 0.0.0.255
 
 
 banner motd *
- 
+
 ##################################################
- 
+
  Unauthorized access to this device is prohibited
- 
+
 ##################################################
- 
+
  $$$b  `---.__
   "$$b        `--.                          ___.---uuudP
    `$$b           `.__.------.__     __.---'      $$$$"              .

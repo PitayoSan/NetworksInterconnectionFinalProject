@@ -1,1160 +1,2296 @@
-show arp
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  172.4.48.1              -   6c5e.3bf5.81c1  ARPA   Vlan48
-Internet  172.4.48.254          167   5057.a8bf.efe8  ARPA   Vlan48
+show arp
+
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+
+Internet  172.4.48.1              -   6c5e.3bf5.81c1  ARPA   Vlan48
+
+Internet  172.4.48.254          167   5057.a8bf.efe8  ARPA   Vlan48
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show cdp neighbors
-Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
-                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
-                  D - Remote, C - CVTA, M - Two-port Mac Relay 
-
-Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
-Monterrey.barco.com
-                 Gig 0/1           126             R S I  CISCO2901 Gig 0/0
-
-Total cdp entries displayed : 1
+show cdp neighbors
+
+Capabilityexamples: R - Router, T - Trans Bridge, B - Source Route Bridge
+
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+
+
+Device ID        LexampleIntrfce     Holdtme    Capability  Platform  Port ID
+
+Monterrey.barco.com
+
+                 Gig 0/1           126             R S I  CISCO2901 Gig 0/0
+
+
+
+Total cdp entries displayed : 1
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show hosts
-Name lookup view: Global
-Default domain is barco.com
-Name/address lookup uses static mappings
-
-Codes: UN - unknown, EX - expired, OK - OK, ?? - revalidate
-       temp - temporary, perm - permanent
-       NA - Not Applicable None - Not defined
-
-Host                      Port  Flags      Age Type   Address(es)
+show hosts
+
+Name lookup view: Global
+
+Default domain is barco.com
+
+Name/address lookup uses static mappings
+
+
+
+Codes: UN - unknown, EX - expired, OK - OK, ?? - revalidate
+
+       temp - temporary, perm - permanent
+
+       NA - Not Applicable None - Not defined
+
+
+
+Host                      Port  Flags      Age Type   Address(es)
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show interfaces
-Vlan1 is administratively down, line protocol is down 
-  Hardware is EtherSVI, address is 6c5e.3bf5.81c0 (bia 6c5e.3bf5.81c0)
-  Internet address will be negotiated using DHCP
-  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive not supported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:33:16, output 04:15:11, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     1268 packets input, 221054 bytes, 0 no buffer
-     Received 0 broadcasts (0 IP multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     182 packets output, 16143 bytes, 0 underruns
-     0 output errors, 2 interface resets
-     0 unknown protocol drops
-     0 output buffer failures, 0 output buffers swapped out
-Vlan48 is up, line protocol is up 
-  Hardware is EtherSVI, address is 6c5e.3bf5.81c1 (bia 6c5e.3bf5.81c1)
-  Internet address is 172.4.48.1/24
-  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive not supported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:00, output 00:00:00, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 4/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     1703 packets input, 105743 bytes, 0 no buffer
-     Received 0 broadcasts (0 IP multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     1871 packets output, 276834 bytes, 0 underruns
-     0 output errors, 1 interface resets
-     0 unknown protocol drops
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/1 is up, line protocol is up (connected) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8181 (bia 6c5e.3bf5.8181)
-  Description: al router                                            
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 100Mb/s, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:21, output 00:00:00, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 923
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 55000 bits/sec, 5 packets/sec
-  5 minute output rate 59000 bits/sec, 11 packets/sec
-     248272 packets input, 215939903 bytes, 0 no buffer
-     Received 4094 broadcasts (3509 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 3509 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     346894 packets output, 223666471 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/2 is up, line protocol is up (connected) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8182 (bia 6c5e.3bf5.8182)
-  Description: vlan 43 usuarios2_MTY
-  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output 00:00:00, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 1000 bits/sec, 1 packets/sec
-  5 minute output rate 50000 bits/sec, 1 packets/sec
-     147853 packets input, 199910699 bytes, 0 no buffer
-     Received 3951 broadcasts (3011 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 3011 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     80171 packets output, 13668222 bytes, 0 underruns
-     0 output errors, 0 collisions, 3 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/3 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8183 (bia 6c5e.3bf5.8183)
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:32:58, output 00:32:53, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     1168 packets input, 300581 bytes, 0 no buffer
-     Received 1040 broadcasts (523 multicasts)
-     1 runts, 0 giants, 0 throttles 
-     2 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 523 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     5863 packets output, 586538 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/4 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8184 (bia 6c5e.3bf5.8184)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/5 is up, line protocol is up (connected) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8185 (bia 6c5e.3bf5.8185)
-  Description: vlan 25 MPLS_MTY     
-  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 100Mb/s, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:01, output 00:00:05, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 1000 bits/sec, 2 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     27263 packets input, 2510571 bytes, 0 no buffer
-     Received 21360 broadcasts (19702 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     1 input errors, 1 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 19702 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     11143 packets output, 1248092 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     502 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/6 is up, line protocol is up (connected) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8186 (bia 6c5e.3bf5.8186)
-  Description: vlan 46 a internet Colima                        
-  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input 00:00:00, output 00:00:05, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 51000 bits/sec, 4 packets/sec
-  5 minute output rate 1000 bits/sec, 2 packets/sec
-     137811 packets input, 18529524 bytes, 0 no buffer
-     Received 48745 broadcasts (28735 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 28735 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     162670 packets output, 200382560 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/7 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8187 (bia 6c5e.3bf5.8187)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/8 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8188 (bia 6c5e.3bf5.8188)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/9 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8189 (bia 6c5e.3bf5.8189)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/10 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818a (bia 6c5e.3bf5.818a)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/11 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818b (bia 6c5e.3bf5.818b)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/12 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818c (bia 6c5e.3bf5.818c)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive set (10 sec)
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/13 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818d (bia 6c5e.3bf5.818d)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive not set
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/14 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818e (bia 6c5e.3bf5.818e)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive not set
-  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/15 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818f (bia 6c5e.3bf5.818f)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive not set
-  Auto-duplex, Auto-speed, link type is auto, media type is Not Present
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
-GigabitEthernet0/16 is down, line protocol is down (notconnect) 
-  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8190 (bia 6c5e.3bf5.8190)
-  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
-     reliability 255/255, txload 1/255, rxload 1/255
-  Encapsulation ARPA, loopback not set
-  Keepalive not set
-  Auto-duplex, Auto-speed, link type is auto, media type is Not Present
-  input flow-control is off, output flow-control is unsupported 
-  ARP type: ARPA, ARP Timeout 04:00:00
-  Last input never, output never, output hang never
-  Last clearing of "show interface" counters never
-  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
-  Queueing strategy: fifo
-  Output queue: 0/40 (size/max)
-  5 minute input rate 0 bits/sec, 0 packets/sec
-  5 minute output rate 0 bits/sec, 0 packets/sec
-     0 packets input, 0 bytes, 0 no buffer
-     Received 0 broadcasts (0 multicasts)
-     0 runts, 0 giants, 0 throttles 
-     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
-     0 watchdog, 0 multicast, 0 pause input
-     0 input packets with dribble condition detected
-     0 packets output, 0 bytes, 0 underruns
-     0 output errors, 0 collisions, 1 interface resets
-     0 unknown protocol drops
-     0 babbles, 0 late collision, 0 deferred
-     0 lost carrier, 0 no carrier, 0 pause output
-     0 output buffer failures, 0 output buffers swapped out
+show interfaces
+
+Vlan1 is administratively down, line protocol is down 
+
+  Hardware is EtherSVI, address is 6c5e.3bf5.81c0 (bia 6c5e.3bf5.81c0)
+
+  Internet address will be negotiated using DHCP
+
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive not supported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input 00:33:16, output 04:15:11, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     1268 packets input, 221054 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 IP multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     182 packets output, 16143 bytes, 0 underruns
+
+     0 output errors, 2 interface resets
+
+     0 unknown protocol drops
+
+     0 output buffer failures, 0 output buffers swapped out
+
+Vlan48 is up, line protocol is up 
+
+  Hardware is EtherSVI, address is 6c5e.3bf5.81c1 (bia 6c5e.3bf5.81c1)
+
+  Internet address is 172.4.48.1/24
+
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive not supported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input 00:00:00, output 00:00:00, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 4/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     1703 packets input, 105743 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 IP multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     1871 packets output, 276834 bytes, 0 underruns
+
+     0 output errors, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/1 is up, line protocol is up (connected) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8181 (bia 6c5e.3bf5.8181)
+
+  Description: al router                                            
+
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Full-duplex, 100Mb/s, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input 00:00:21, output 00:00:00, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 923
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 55000 bits/sec, 5 packets/sec
+
+  5 minute output rate 59000 bits/sec, 11 packets/sec
+
+     248272 packets input, 215939903 bytes, 0 no buffer
+
+     Received 4094 broadcasts (3509 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 3509 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     346894 packets output, 223666471 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/2 is up, line protocol is up (connected) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8182 (bia 6c5e.3bf5.8182)
+
+  Description: vlan 43 usuarios2_MTY
+
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output 00:00:00, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 1000 bits/sec, 1 packets/sec
+
+  5 minute output rate 50000 bits/sec, 1 packets/sec
+
+     147853 packets input, 199910699 bytes, 0 no buffer
+
+     Received 3951 broadcasts (3011 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 3011 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     80171 packets output, 13668222 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 3 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/3 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8183 (bia 6c5e.3bf5.8183)
+
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input 00:32:58, output 00:32:53, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     1168 packets input, 300581 bytes, 0 no buffer
+
+     Received 1040 broadcasts (523 multicasts)
+
+     1 runts, 0 giants, 0 throttles 
+
+     2 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 523 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     5863 packets output, 586538 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/4 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8184 (bia 6c5e.3bf5.8184)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/5 is up, line protocol is up (connected) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8185 (bia 6c5e.3bf5.8185)
+
+  Description: vlan 25 MPLS_MTY     
+
+  MTU 1500 bytes, BW 100000 Kbit/sec, DLY 100 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Full-duplex, 100Mb/s, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input 00:00:01, output 00:00:05, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 1000 bits/sec, 2 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     27263 packets input, 2510571 bytes, 0 no buffer
+
+     Received 21360 broadcasts (19702 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     1 input errors, 1 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 19702 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     11143 packets output, 1248092 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     502 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/6 is up, line protocol is up (connected) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8186 (bia 6c5e.3bf5.8186)
+
+  Description: vlan 46 a internet Colima                        
+
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Full-duplex, 1000Mb/s, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input 00:00:00, output 00:00:05, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 51000 bits/sec, 4 packets/sec
+
+  5 minute output rate 1000 bits/sec, 2 packets/sec
+
+     137811 packets input, 18529524 bytes, 0 no buffer
+
+     Received 48745 broadcasts (28735 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 28735 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     162670 packets output, 200382560 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/7 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8187 (bia 6c5e.3bf5.8187)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/8 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8188 (bia 6c5e.3bf5.8188)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+example
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/9 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8189 (bia 6c5e.3bf5.8189)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/10 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818a (bia 6c5e.3bf5.818a)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/11 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818b (bia 6c5e.3bf5.818b)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/12 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818c (bia 6c5e.3bf5.818c)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive set (10 sec)
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/13 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818d (bia 6c5e.3bf5.818d)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive not set
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/14 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818e (bia 6c5e.3bf5.818e)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive not set
+
+  Auto-duplex, Auto-speed, media type is 10/100/1000BaseTX
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/15 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.818f (bia 6c5e.3bf5.818f)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive not set
+
+  Auto-duplex, Auto-speed, link type is auto, media type is Not Present
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
+GigabitEthernet0/16 is down, line protocol is down (notconnect) 
+
+  Hardware is Gigabit Ethernet, address is 6c5e.3bf5.8190 (bia 6c5e.3bf5.8190)
+
+  MTU 1500 bytes, BW 10000 Kbit/sec, DLY 1000 usec, 
+
+     reliability 255/255, txload 1/255, rxload 1/255
+
+  Encapsulation ARPA, loopback not set
+
+  Keepalive not set
+
+  Auto-duplex, Auto-speed, link type is auto, media type is Not Present
+
+  input flow-control is off, output flow-control is unsupported 
+
+  ARP type: ARPA, ARP Timeout 04:00:00
+
+  Last input never, output never, output hang never
+
+  Last clearing of "show interface" counters never
+
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+
+  Queueing strategy: fifo
+
+  Output queue: 0/40 (size/max)
+
+  5 minute input rate 0 bits/sec, 0 packets/sec
+
+  5 minute output rate 0 bits/sec, 0 packets/sec
+
+     0 packets input, 0 bytes, 0 no buffer
+
+     Received 0 broadcasts (0 multicasts)
+
+     0 runts, 0 giants, 0 throttles 
+
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+
+     0 watchdog, 0 multicast, 0 pause input
+
+     0 input packets with dribble condition detected
+
+     0 packets output, 0 bytes, 0 underruns
+
+     0 output errors, 0 collisions, 1 interface resets
+
+     0 unknown protocol drops
+
+     0 babbles, 0 late collision, 0 deferred
+
+     0 lost carrier, 0 no carrier, 0 pause output
+
+     0 output buffer failures, 0 output buffers swapped out
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show mac-address-table
-                     ^
-% Invalid input detected at '^' marker.
-
+show mac-address-table
+
+                     ^
+
+% Invalid input detected at '^' marker.
+
+
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show ntp status
-Clock is unsynchronized, stratum 16, no reference clock
-nominal freq is 286.1023 Hz, actual freq is 286.1023 Hz, precision is 2**21
-ntp uptime is 1574600 (1/100 of seconds), resolution is 3496
-reference time is E17AC865.ED0A0E99 (19:11:33.925 UTC Sat Nov 16 2019)
-clock offset is 0.0000 msec, root delay is 0.00 msec
-root dispersion is 230.81 msec, peer dispersion is 0.00 msec
-loopfilter state is 'FREQ' (Drift being measured), drift is 0.000000000 s/s
-system poll interval is 64, last update was 15402 sec ago.
+show ntp status
+
+Clock is unsynchronized, stratum 16, no reference clock
+
+nominal freq is 286.1023 Hz, actual freq is 286.1023 Hz, precision is 2**21
+
+ntp uptime is 1574600 (1/100 of seconds), resolution is 3496
+
+reference time is E17AC865.ED0A0E99 (19:11:33.925 UTC Sat Nov 16 2019)
+
+clock offset is 0.0000 msec, root delay is 0.00 msec
+
+root dispersion is 230.81 msec, peer dispersion is 0.00 msec
+
+loopfilter state is 'FREQ' (Drift being measured), drift is 0.000000000 s/s
+
+system poll interval is 64, last update was 15402 sec ago.
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show port-security
-Secure Port  MaxSecureAddr  CurrentAddr  SecurityViolation  Security Action
-                (Count)       (Count)          (Count)
----------------------------------------------------------------------------
-      Gi0/2             40            2                  1         Shutdown
----------------------------------------------------------------------------
-Total Addresses in System (excluding one mac per port)     : 1
-Max Addresses limit in System (excluding one mac per port) : 16384
+show port-security
+
+Secure Port  MaxSecureAddr  CurrentAddr  SecurityViolation  Security Action
+
+                (Count)       (Count)          (Count)
+
+---------------------------------------------------------------------------
+
+      Gi0/2             40            2                  1         Shutdown
+
+---------------------------------------------------------------------------
+
+Total Addresses in System (excluding one mac per port)     : 1
+
+Max Addresses limit in System (excluding one mac per port) : 16384
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show running-config
-Building configuration...
-
-Current configuration : 16768 bytes
-!
-! Last configuration change at 22:19:52 UTC Sat Nov 16 2019 by cisco1
-!
-version 15.2
-no service pad
-service timestamps debug datetime msec
-service timestamps log datetime msec
-no service password-encryption
-!
-hostname Sw_Monterrey
-!
-boot-start-marker
-boot-end-marker
-!
-enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
-!
-username cisco privilege 5 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
-username cisco1 privilege 15 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
-no aaa new-model
-system mtu routing 1500
-!
-!
-!
-!
-!
-!
-no ip domain-lookup
-ip domain-name barco.com
-login block-for 300 attempts 3 within 60
-!
-!
-!
-!
-!
-!
-!
-crypto pki certificate pool
- certificate ca 0509
-  308205B7 3082039F A0030201 02020205 09300D06 092A8648 86F70D01 01050500 
-  3045310B 30090603 55040613 02424D31 19301706 0355040A 13105175 6F566164 
-  6973204C 696D6974 6564311B 30190603 55040313 1251756F 56616469 7320526F 
-  6F742043 41203230 1E170D30 36313132 34313832 3730305A 170D3331 31313234 
-  31383233 33335A30 45310B30 09060355 04061302 424D3119 30170603 55040A13 
-  1051756F 56616469 73204C69 6D697465 64311B30 19060355 04031312 51756F56 
-  61646973 20526F6F 74204341 20323082 0222300D 06092A86 4886F70D 01010105 
-  00038202 0F003082 020A0282 0201009A 18CA4B94 0D002DAF 03298AF0 0F81C8AE 
-  4C19851D 089FAB29 4485F32F 81AD321E 9046BFA3 86261A1E FE7E1C18 3A5C9C60 
-  172A3A74 8333307D 615411CB EDABE0E6 D2A27EF5 6B6F18B7 0A0B2DFD E93EEF0A 
-  C6B310E9 DCC24617 F85DFDA4 DAFF9E49 5A9CE633 E62496F7 3FBA5B2B 1C7A35C2 
-  D667FEAB 66508B6D 28602BEF D760C3C7 93BC8D36 91F37FF8 DB1113C4 9C7776C1 
-  AEB7026A 817AA945 83E205E6 B956C194 378F4871 6322EC17 6507958A 4BDF8FC6 
-  5A0AE5B0 E35F5E6B 11AB0CF9 85EB44E9 F80473F2 E9FE5C98 8CF573AF 6BB47ECD 
-  D45C022B 4C39E1B2 95952D42 87D7D5B3 9043B76C 13F1DEDD F6C4F889 3FD175F5 
-  92C391D5 8A88D090 ECDC6DDE 89C26571 968B0D03 FD9CBF5B 16AC92DB EAFE797C 
-  ADEBAFF7 16CBDBCD 252BE51F FB9A9FE2 51CC3A53 0C48E60E BDC9B476 0652E611 
-  13857263 0304E004 362B2019 02E874A7 1FB6C956 66F07525 DC67C10E 616088B3 
-  3ED1A8FC A3DA1DB0 D1B12354 DF44766D ED41D8C1 B222B653 1CDF351D DCA1772A 
-  31E42DF5 E5E5DBC8 E0FFE580 D70B63A0 FF33A10F BA2C1515 EA97B3D2 A2B5BEF2 
-  8C961E1A 8F1D6CA4 6137B986 7333D797 969E237D 82A44C81 E2A1D1BA 675F9507 
-  A32711EE 16107BBC 454A4CB2 04D2ABEF D5FD0C51 CE506A08 31F991DA 0C8F645C 
-  03C33A8B 203F6E8D 673D3AD6 FE7D5B88 C95EFBCC 61DC8B33 77D34432 35096204 
-  921610D8 9E2747FB 3B21E3F8 EB1D5B02 03010001 A381B030 81AD300F 0603551D 
-  130101FF 04053003 0101FF30 0B060355 1D0F0404 03020106 301D0603 551D0E04 
-  1604141A 8462BC48 4C332504 D4EED0F6 03C41946 D1946B30 6E060355 1D230467 
-  30658014 1A8462BC 484C3325 04D4EED0 F603C419 46D1946B A149A447 3045310B 
-  30090603 55040613 02424D31 19301706 0355040A 13105175 6F566164 6973204C 
-  696D6974 6564311B 30190603 55040313 1251756F 56616469 7320526F 6F742043 
-  41203282 02050930 0D06092A 864886F7 0D010105 05000382 0201003E 0A164D9F 
-  065BA8AE 715D2F05 2F67E613 4583C436 F6F3C026 0C0DB547 645DF8B4 72C946A5 
-  03182755 89787D76 EA963480 1720DCE7 83F88DFC 07B8DA5F 4D2E67B2 84FDD944 
-  FC775081 E67CB4C9 0D0B7253 F8760707 4147960C FBE08226 93558CFE 221F6065 
-  7C5FE726 B3F73290 9850D437 7155F692 2178F795 79FAF82D 26876656 3077A637 
-  78335210 58AE3F61 8EF26AB1 EF187E4A 5963CA8D A256D5A7 2FBC561F CF39C1E2 
-  FB0AA815 2C7D4D7A 63C66C97 443CD26F C34A170A F890D257 A21951A5 2D9741DA 
-  074FA950 DA908D94 46E13EF0 94FD1000 38F53BE8 40E1B46E 561A20CC 6F588DED 
-  2E458FD6 E9933FE7 B12CDF3A D6228CDC 84BB226F D0F8E4C6 39E90488 3CC3BAEB 
-  557A6D80 9924F56C 01FBF897 B0945BEB FDD26FF1 77680D35 6423ACB8 55A103D1 
-  4D4219DC F8755956 A3F9A849 79F8AF0E B911A07C B76AED34 D0B62662 381A870C 
-  F8E8FD2E D3907F07 912A1DD6 7E5C8583 99B03808 3FE95EF9 3507E4C9 626E577F 
-  A75095F7 BAC89BE6 8EA201C5 D666BF79 61F33C1C E1B9825C 5DA0C3E9 D848BD19 
-  A2111419 6EB2861B 683E4837 1A88B75D 965E9CC7 EF276208 E291195C D2F121DD 
-  BA174282 97718153 31A99FF6 7D62BF72 E1A3931D CC8A265A 0938D0CE D70D8016 
-  B478A53A 874C8D8A A5D54697 F22C10B9 BC5422C0 01506943 9EF4B2EF 6DF8ECDA 
-  F1E3B1EF DF918F54 2A0B25C1 2619C452 100565D5 8210EAC2 31CD2E
-  	quit
- certificate ca 083BE056904246B1A1756AC95991C74A
-  308203AF 30820297 A0030201 02021008 3BE05690 4246B1A1 756AC959 91C74A30 
-  0D06092A 864886F7 0D010105 05003061 310B3009 06035504 06130255 53311530 
-  13060355 040A130C 44696769 43657274 20496E63 31193017 06035504 0B131077 
-  77772E64 69676963 6572742E 636F6D31 20301E06 03550403 13174469 67694365 
-  72742047 6C6F6261 6C20526F 6F742043 41301E17 0D303631 31313030 30303030 
-  305A170D 33313131 31303030 30303030 5A306131 0B300906 03550406 13025553 
-  31153013 06035504 0A130C44 69676943 65727420 496E6331 19301706 0355040B 
-  13107777 772E6469 67696365 72742E63 6F6D3120 301E0603 55040313 17446967 
-  69436572 7420476C 6F62616C 20526F6F 74204341 30820122 300D0609 2A864886 
-  F70D0101 01050003 82010F00 3082010A 02820101 00E23BE1 1172DEA8 A4D3A357 
-  AA50A28F 0B7790C9 A2A5EE12 CE965B01 0920CC01 93A74E30 B753F743 C4690057 
-  9DE28D22 DD870640 008109CE CE1B83BF DFCD3B71 46E2D666 C705B376 27168F7B 
-  9E1E957D EEB748A3 08DAD6AF 7A0C3906 657F4A5D 1FBC17F8 ABBEEE28 D7747F7A 
-  78995985 686E5C23 324BBF4E C0E85A6D E370BF77 10BFFC01 F685D9A8 44105832 
-  A97518D5 D1A2BE47 E2276AF4 9A33F849 08608BD4 5FB43A84 BFA1AA4A 4C7D3ECF 
-  4F5F6C76 5EA04B37 919EDC22 E66DCE14 1A8E6ACB FECDB314 6417C75B 299E32BF 
-  F2EEFAD3 0B42D4AB B74132DA 0CD4EFF8 81D5BB8D 583FB51B E84928A2 70DA3104 
-  DDF7B216 F24C0A4E 07A8ED4A 3D5EB57F A390C3AF 27020301 0001A363 3061300E 
-  0603551D 0F0101FF 04040302 0186300F 0603551D 130101FF 04053003 0101FF30 
-  1D060355 1D0E0416 041403DE 503556D1 4CBB66F0 A3E21B1B C397B23D D155301F 
-  0603551D 23041830 16801403 DE503556 D14CBB66 F0A3E21B 1BC397B2 3DD15530 
-  0D06092A 864886F7 0D010105 05000382 010100CB 9C37AA48 13120AFA DD449C4F 
-  52B0F4DF AE04F579 7908A324 18FC4B2B 84C02DB9 D5C7FEF4 C11F58CB B86D9C7A 
-  74E79829 AB11B5E3 70A0A1CD 4C889993 8C9170E2 AB0F1CBE 93A9FF63 D5E40760 
-  D3A3BF9D 5B09F1D5 8EE353F4 8E63FA3F A7DBB466 DF6266D6 D16E418D F22DB5EA 
-  774A9F9D 58E22B59 C04023ED 2D288245 3E795492 2698E080 48A837EF F0D67960 
-  16DEACE8 0ECD6EAC 4417382F 49DAE145 3E2AB936 53CF3A50 06F72EE8 C457496C 
-  612118D5 04AD783C 2C3A806B A7EBAF15 14E9D889 C1B9386C E2916C8A FF64B977 
-  255730C0 1B24A3E1 DCE9DF47 7CB5B424 080530EC 2DBD0BBF 45BF50B9 A9F3EB98 
-  0112ADC8 88C69834 5F8D0A3C C6E9D595 956DDE
-  	quit
- certificate ca 18DAD19E267DE8BB4A2158CDCC6B3B4A
-  308204D3 308203BB A0030201 02021018 DAD19E26 7DE8BB4A 2158CDCC 6B3B4A30 
-  0D06092A 864886F7 0D010105 05003081 CA310B30 09060355 04061302 55533117 
-  30150603 55040A13 0E566572 69536967 6E2C2049 6E632E31 1F301D06 0355040B 
-  13165665 72695369 676E2054 72757374 204E6574 776F726B 313A3038 06035504 
-  0B133128 63292032 30303620 56657269 5369676E 2C20496E 632E202D 20466F72 
-  20617574 686F7269 7A656420 75736520 6F6E6C79 31453043 06035504 03133C56 
-  65726953 69676E20 436C6173 73203320 5075626C 69632050 72696D61 72792043 
-  65727469 66696361 74696F6E 20417574 686F7269 7479202D 20473530 1E170D30 
-  36313130 38303030 3030305A 170D3336 30373136 32333539 35395A30 81CA310B 
-  30090603 55040613 02555331 17301506 0355040A 130E5665 72695369 676E2C20 
-  496E632E 311F301D 06035504 0B131656 65726953 69676E20 54727573 74204E65 
-  74776F72 6B313A30 38060355 040B1331 28632920 32303036 20566572 69536967 
-  6E2C2049 6E632E20 2D20466F 72206175 74686F72 697A6564 20757365 206F6E6C 
-  79314530 43060355 0403133C 56657269 5369676E 20436C61 73732033 20507562 
-  6C696320 5072696D 61727920 43657274 69666963 6174696F 6E204175 74686F72 
-  69747920 2D204735 30820122 300D0609 2A864886 F70D0101 01050003 82010F00 
-  3082010A 02820101 00AF2408 08297A35 9E600CAA E74B3B4E DC7CBC3C 451CBB2B 
-  E0FE2902 F95708A3 64851527 F5F1ADC8 31895D22 E82AAAA6 42B38FF8 B955B7B1 
-  B74BB3FE 8F7E0757 ECEF43DB 66621561 CF600DA4 D8DEF8E0 C362083D 5413EB49 
-  CA595485 26E52B8F 1B9FEBF5 A191C233 49D84363 6A524BD2 8FE87051 4DD18969 
-  7BC770F6 B3DC1274 DB7B5D4B 56D396BF 1577A1B0 F4A225F2 AF1C9267 18E5F406 
-  04EF90B9 E400E4DD 3AB519FF 02BAF43C EEE08BEB 378BECF4 D7ACF2F6 F03DAFDD 
-  75913319 1D1C40CB 74241921 93D914FE AC2A52C7 8FD50449 E48D6347 883C6983 
-  CBFE47BD 2B7E4FC5 95AE0E9D D4D143C0 6773E314 087EE53F 9F73B833 0ACF5D3F 
-  3487968A EE53E825 15020301 0001A381 B23081AF 300F0603 551D1301 01FF0405 
-  30030101 FF300E06 03551D0F 0101FF04 04030201 06306D06 082B0601 05050701 
-  0C046130 5FA15DA0 5B305930 57305516 09696D61 67652F67 69663021 301F3007 
-  06052B0E 03021A04 148FE5D3 1A86AC8D 8E6BC3CF 806AD448 182C7B19 2E302516 
-  23687474 703A2F2F 6C6F676F 2E766572 69736967 6E2E636F 6D2F7673 6C6F676F 
-  2E676966 301D0603 551D0E04 1604147F D365A7C2 DDECBBF0 3009F343 39FA02AF 
-  33313330 0D06092A 864886F7 0D010105 05000382 01010093 244A305F 62CFD81A 
-  982F3DEA DC992DBD 77F6A579 2238ECC4 A7A07812 AD620E45 7064C5E7 97662D98 
-  097E5FAF D6CC2865 F201AA08 1A47DEF9 F97C925A 0869200D D93E6D6E 3C0D6ED8 
-  E6069140 18B9F8C1 EDDFDB41 AAE09620 C9CD6415 3881C994 EEA28429 0B136F8E 
-  DB0CDD25 02DBA48B 1944D241 7A05694A 584F60CA 7E826A0B 02AA2517 39B5DB7F 
-  E784652A 958ABD86 DE5E8116 832D10CC DEFDA882 2A6D281F 0D0BC4E5 E71A2619 
-  E1F4116F 10B595FC E7420532 DBCE9D51 5E28B69E 85D35BEF A57D4540 728EB70E 
-  6B0E06FB 33354871 B89D278B C4655F0D 86769C44 7AF6955C F65D3208 33A454B6 
-  183F685C F2424A85 3854835F D1E82CF2 AC11D6A8 ED636A
-  	quit
- certificate ca 01
-  308201CC 30820152 A0030201 02020101 300A0608 2A8648CE 3D040303 302C310E 
-  300C0603 55040A13 05436973 636F311A 30180603 55040313 11436973 636F2045 
-  43432052 6F6F7420 43413024 170D3133 30343034 30383135 34345A18 13323035 
-  33303430 34303831 3534342E 3730345A 302C310E 300C0603 55040A13 05436973 
-  636F311A 30180603 55040313 11436973 636F2045 43432052 6F6F7420 43413076 
-  30100607 2A8648CE 3D020106 052B8104 00220362 00047EC0 C3BCD81B C6F36791 
-  4DD6788C E6B57539 047F2FFE 60D0AC77 2AD36D02 41455467 B058B719 BFCCBD4B 
-  365C7B5B 8338ECA6 D74D3026 61B34B8B AB5E0E15 263B4C88 AB0270C9 22370250 
-  75C0D5D4 4834C7BF 5853FEAE CB8F7320 F5065B12 87CAA342 3040300E 0603551D 
-  0F0101FF 04040302 0106300F 0603551D 130101FF 04053003 0101FF30 1D060355 
-  1D0E0416 0414A445 B62FA331 B17615B0 0A1833CA F6AD4F3D 2804300A 06082A86 
-  48CE3D04 03030368 00306502 3063415D 449305AF F01A0174 2AA56561 97DEE73B 
-  4960D816 6DD05D2C B30E3F60 5A8376ED 2D9A90B9 5FE845B3 04509819 BF023100 
-  D9A837EE D78C7895 E7D2FE16 F13F63D7 1018AABC 560B0196 0BCBC842 9F9F7190 
-  1C8F4597 5584D806 2485A5B7 85DDC303
-  	quit
- certificate ca 019A335878CE16C1C1
-  30820321 30820209 A0030201 02020901 9A335878 CE16C1C1 300D0609 2A864886 
-  F70D0101 0B050030 2D310E30 0C060355 040A1305 43697363 6F311B30 19060355 
-  04031312 43697363 6F20526F 6F742043 41203230 39393020 170D3136 30383039 
-  32303538 32385A18 0F323039 39303830 39323035 3832385A 302D310E 300C0603 
-  55040A13 05436973 636F311B 30190603 55040313 12436973 636F2052 6F6F7420 
-  43412032 30393930 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
-  82010A02 82010100 D3B6E335 7E0D3EF4 67E58A4E 1AC6508A D48D9F6F 711208BF 
-  3EB64F24 3979617E B27FCE57 D16DEEB4 C513F489 418C2962 818F422F BD615FE0 
-  05BF9F2C C247CBA3 4EDE1AD7 511BE794 802976D7 610ECBE1 8320FA59 999A0FC8 
-  BF718911 CDC70985 3406C63C 83D2EE2C CBEAC223 66030336 8D6CCDAB 410F02BB 
-  7F17A462 40AABA4D ADDEED52 1F0D9EC9 EB9380DB 10120361 6B49EF55 8FDECAA5 
-  045E0DC9 BA1BB72A 147E5FF8 2ADD438A B001AE33 58DC8CDE 43A951BE B7EC335D 
-  F66FA7E9 6102C9CF C8503FB6 7BECA9DB 59016482 87EC9BC3 A6ED94EC D04F7EBE 
-  769855FC 01F09982 45D5EBD6 E9FA261F B1A1F50E F5C87CFA 4DA7DDF3 18A5125F 
-  1123E30F 3CD6DDB3 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
-  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 14389557 
-  0F34234E F3A12620 BA1491C7 41881DA3 5B300D06 092A8648 86F70D01 010B0500 
-  03820101 008DE299 A3EE3177 4E5316DA BDF672A7 580D09F8 39B27413 A73CCC18 
-  943ACA7C 129EDB05 6EE4024C BD18E024 8A18FC21 D53DA08E 587E7C51 3A9F8E2F 
-  797946AB C90FECDF A44AAC18 0C325C2B 58D22DC4 4EB6E4F1 EE68DE84 8C3D5675 
-  6891319D A1CBC178 1422B3E6 181412F3 7E3D4359 C2C3E7A5 4EAADC0C B4FB5D53 
-  E13AE2C0 257C909C 77716BB4 36F4F2A5 80825CCB 1C49F2C5 411D776E 8FB5CFA5 
-  CD9B7D12 79C9ABC6 49900553 2A8C264C 56F03187 15B58869 D874F450 B8DAADD3 
-  1213CC24 8446A837 41556A62 71495243 5537A8F4 76698C54 A661D7B1 E0A8B9C5 
-  3CA92606 5350F614 1C34CDC2 4B356F10 02B40821 28FCD27F C7367A59 7D7F7FC0 
-  DFD5E5DB 16
-  	quit
-!
-spanning-tree mode pvst
-spanning-tree extend system-id
-errdisable recovery cause security-violation
-errdisable recovery interval 180
-!
-!
-!
-!
-vlan internal allocation policy ascending
-!
-lldp run
-!
-! 
-!
-!
-!
-!
-!
-!
-!
-!
-!
-interface GigabitEthernet0/1
- description al router                                            
- switchport mode trunk
-!
-interface GigabitEthernet0/2
- description vlan 43 usuarios2_MTY
- switchport access vlan 43
- switchport mode access
- switchport port-security maximum 40
- switchport port-security
- no cdp enable
- no lldp transmit
- spanning-tree portfast edge
-!
-interface GigabitEthernet0/3
-!
-interface GigabitEthernet0/4
-!
-interface GigabitEthernet0/5
- description vlan 25 MPLS_MTY     
- switchport access vlan 25
- switchport mode access
- no cdp enable
- no lldp transmit
-!
-interface GigabitEthernet0/6
- description vlan 46 a internet Colima                        
- switchport access vlan 46
- switchport mode access
- no cdp enable
- no lldp transmit
-!
-interface GigabitEthernet0/7
-!
-interface GigabitEthernet0/8
-!
-interface GigabitEthernet0/9
-!
-interface GigabitEthernet0/10
-!
-interface GigabitEthernet0/11
-!
-interface GigabitEthernet0/12
-!
-interface GigabitEthernet0/13
-!
-interface GigabitEthernet0/14
-!
-interface GigabitEthernet0/15
-!
-interface GigabitEthernet0/16
-!
-interface Vlan1
- ip address dhcp
- shutdown
-!
-interface Vlan48
- ip address 172.4.48.1 255.255.255.0
-!
-ip default-gateway 172.4.48.254
-ip forward-protocol nd
-!
-ip http server
-ip http secure-server
-ip ssh version 2
-!
-!
-logging host 172.4.31.1
-access-list 2 remark ACL admin_gdl
-access-list 2 permit 172.4.0.0 0.0.0.255
-access-list 2 permit 172.4.31.0 0.0.0.255
-access-list 2 deny   any log
-!
-banner motd ^C
-
-##################################################
-
- Unauthorized access to this device is prohibited 
-
-##################################################
-b
-(
- $$$b  `---.__
-  "$$b        `--.                          ___.---uuudP
-   `$$b           `.__.------.__     __.---'      $$$$"              .
-     "$b          -'            `-.-'            $$$"              .'|
-       ".                                       d$"             _.'  |
-         `.   /                              ..."             .'     |
-           `./                           ..::-'            _.'       |
-            /                         .:::-'            .-'         .'
-           :                          ::''\          _.'            |
-          .' .-.             .-.           `.      .'               |
-          : /'$$|           .@"$\           `.   .'              _.-'
-         .'|$u$$|          |$$,$$|           |  <            _.-'
-         | `:$$:'          :$$$$$:           `.  `.       .-'
-         :                  `"--'             |    `-.     \
-        :##.       ==             .###.       `.      `.    `\
-        |##:                      :###:        |        >     >
-        |#'     `..'`..'          `###'        x:      /     /
-         \                                   xXX|     /    ./
-          \                                xXXX'|    /   ./
-          /`-.                                  `.  /   /
-         :    `-  ...........,                   | /  .'
-         |         ``:::::::'       .            |<    `.
-         |             ```          |           x| \ `.:``.
-         |                         .'    /'   xXX|  `:`M`M':.
-         |    |                    ;    /:' xXXX'|  -'MMMMM:'
-         `.  .'                   :    /:'       |-'MMMM.-'
-          |  |                   .'   /'        .'MMM.-'
-          `'`'                   :  ,'          |MMM<
-            |                     `'            |tbap\
-             \                                  :MM.-'
-              \                 |              .''
-               \.               `.            /
-                /     .:::::::.. :           /
-               |     .:::::::::::`.         /
-               |   .:::------------\       /
-              /   .''               >::'  /
-              `',:                 :    .'
-                                   `:.:'
-
-^C
-!
-line con 0
- exec-timeout 5 0
- login local
-line vty 0 4
- exec-timeout 5 0
- login local
-line vty 5 15
- exec-timeout 5 0
- login local
-!
-ntp server pool.ntp.org
-ntp server 10.40.72.254
-mac address-table aging-time 3600
-!
-!
-pnp profile pnp_cco_profile
- transport https host devicehelper.cisco.com port 443
-end
-
+show running-config
+
+Building configuration...
+
+
+
+Current configuration : 16768 bytes
+
+!
+
+! Last configuration change at 22:19:52 UTC Sat Nov 16 2019 by cisco1
+
+!
+
+version 15.2
+
+no service pad
+
+service timestamps debug datetime msec
+
+service timestamps log datetime msec
+
+no service password-encryption
+
+!
+
+hostname Sw_Monterrey
+
+!
+
+boot-start-marker
+
+boot-end-marker
+
+!
+
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+
+!
+
+username cisco privilege 5 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+
+username cisco1 privilege 15 secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+
+no aaa new-model
+
+system mtu routing 1500
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+no ip domain-lookup
+
+ip domain-name barco.com
+
+login block-for 300 attempts 3 within 60
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+crypto pki certificate pool
+
+ certificate ca 0509
+
+  308205B7 3082039F A0030201 02020205 09300D06 092A8648 86F70D01 01050500 
+
+  3045310B 30090603 55040613 02424D31 19301706 0355040A 13105175 6F566164 
+
+  6973204C 696D6974 6564311B 30190603 55040313 1251756F 56616469 7320526F 
+
+  6F742043 41203230 1E170D30 36313132 34313832 3730305A 170D3331 31313234 
+
+  31383233 33335A30 45310B30 09060355 04061302 424D3119 30170603 55040A13 
+
+  1051756F 56616469 73204C69 6D697465 64311B30 19060355 04031312 51756F56 
+
+  61646973 20526F6F 74204341 20323082 0222300D 06092A86 4886F70D 01010105 
+
+  00038202 0F003082 020A0282 0201009A 18CA4B94 0D002DAF 03298AF0 0F81C8AE 
+
+  4C19851D 089FAB29 4485F32F 81AD321E 9046BFA3 86261A1E FE7E1C18 3A5C9C60 
+
+  172A3A74 8333307D 615411CB EDABE0E6 D2A27EF5 6B6F18B7 0A0B2DFD E93EEF0A 
+
+  C6B310E9 DCC24617 F85DFDA4 DAFF9E49 5A9CE633 E62496F7 3FBA5B2B 1C7A35C2 
+
+  D667FEAB 66508B6D 28602BEF D760C3C7 93BC8D36 91F37FF8 DB1113C4 9C7776C1 
+
+  AEB7026A 817AA945 83E205E6 B956C194 378F4871 6322EC17 6507958A 4BDF8FC6 
+
+  5A0AE5B0 E35F5E6B 11AB0CF9 85EB44E9 F80473F2 E9FE5C98 8CF573AF 6BB47ECD 
+
+  D45C022B 4C39E1B2 95952D42 87D7D5B3 9043B76C 13F1DEDD F6C4F889 3FD175F5 
+
+  92C391D5 8A88D090 ECDC6DDE 89C26571 968B0D03 FD9CBF5B 16AC92DB EAFE797C 
+
+  ADEBAFF7 16CBDBCD 252BE51F FB9A9FE2 51CC3A53 0C48E60E BDC9B476 0652E611 
+
+  13857263 0304E004 362B2019 02E874A7 1FB6C956 66F07525 DC67C10E 616088B3 
+
+  3ED1A8FC A3DA1DB0 D1B12354 DF44766D ED41D8C1 B222B653 1CDF351D DCA1772A 
+
+  31E42DF5 E5E5DBC8 E0FFE580 D70B63A0 FF33A10F BA2C1515 EA97B3D2 A2B5BEF2 
+
+  8C961E1A 8F1D6CA4 6137B986 7333D797 969E237D 82A44C81 E2A1D1BA 675F9507 
+
+  A32711EE 16107BBC 454A4CB2 04D2ABEF D5FD0C51 CE506A08 31F991DA 0C8F645C 
+
+  03C33A8B 203F6E8D 673D3AD6 FE7D5B88 C95EFBCC 61DC8B33 77D34432 35096204 
+
+  921610D8 9E2747FB 3B21E3F8 EB1D5B02 03010001 A381B030 81AD300F 0603551D 
+
+  130101FF 04053003 0101FF30 0B060355 1D0F0404 03020106 301D0603 551D0E04 
+
+  1604141A 8462BC48 4C332504 D4EED0F6 03C41946 D1946B30 6E060355 1D230467 
+
+  30658014 1A8462BC 484C3325 04D4EED0 F603C419 46D1946B A149A447 3045310B 
+
+  30090603 55040613 02424D31 19301706 0355040A 13105175 6F566164 6973204C 
+
+  696D6974 6564311B 30190603 55040313 1251756F 56616469 7320526F 6F742043 
+
+  41203282 02050930 0D06092A 864886F7 0D010105 05000382 0201003E 0A164D9F 
+
+  065BA8AE 715D2F05 2F67E613 4583C436 F6F3C026 0C0DB547 645DF8B4 72C946A5 
+
+  03182755 89787D76 EA963480 1720DCE7 83F88DFC 07B8DA5F 4D2E67B2 84FDD944 
+
+  FC775081 E67CB4C9 0D0B7253 F8760707 4147960C FBE08226 93558CFE 221F6065 
+
+  7C5FE726 B3F73290 9850D437 7155F692 2178F795 79FAF82D 26876656 3077A637 
+
+  78335210 58AE3F61 8EF26AB1 EF187E4A 5963CA8D A256D5A7 2FBC561F CF39C1E2 
+
+  FB0AA815 2C7D4D7A 63C66C97 443CD26F C34A170A F890D257 A21951A5 2D9741DA 
+
+  074FA950 DA908D94 46E13EF0 94FD1000 38F53BE8 40E1B46E 561A20CC 6F588DED 
+
+  2E458FD6 E9933FE7 B12CDF3A D6228CDC 84BB226F D0F8E4C6 39E90488 3CC3BAEB 
+
+  557A6D80 9924F56C 01FBF897 B0945BEB FDD26FF1 77680D35 6423ACB8 55A103D1 
+
+  4D4219DC F8755956 A3F9A849 79F8AF0E B911A07C B76AED34 D0B62662 381A870C 
+
+  F8E8FD2E D3907F07 912A1DD6 7E5C8583 99B03808 3FE95EF9 3507E4C9 626E577F 
+
+  A75095F7 BAC89BE6 8EA201C5 D666BF79 61F33C1C E1B9825C 5DA0C3E9 D848BD19 
+
+  A2111419 6EB2861B 683E4837 1A88B75D 965E9CC7 EF276208 E291195C D2F121DD 
+
+  BA174282 97718153 31A99FF6 7D62BF72 E1A3931D CC8A265A 0938D0CE D70D8016 
+
+  B478A53A 874C8D8A A5D54697 F22C10B9 BC5422C0 01506943 9EF4B2EF 6DF8ECDA 
+
+  F1E3B1EF DF918F54 2A0B25C1 2619C452 100565D5 8210EAC2 31CD2E
+
+  	quit
+
+ certificate ca 083BE056904246B1A1756AC95991C74A
+
+  308203AF 30820297 A0030201 02021008 3BE05690 4246B1A1 756AC959 91C74A30 
+
+  0D06092A 864886F7 0D010105 05003061 310B3009 06035504 06130255 53311530 
+
+  13060355 040A130C 44696769 43657274 20496E63 31193017 06035504 0B131077 
+
+  77772E64 69676963 6572742E 636F6D31 20301E06 03550403 13174469 67694365 
+
+  72742047 6C6F6261 6C20526F 6F742043 41301E17 0D303631 31313030 30303030 
+
+  305A170D 33313131 31303030 30303030 5A306131 0B300906 03550406 13025553 
+
+  31153013 06035504 0A130C44 69676943 65727420 496E6331 19301706 0355040B 
+
+  13107777 772E6469 67696365 72742E63 6F6D3120 301E0603 55040313 17446967 
+
+  69436572 7420476C 6F62616C 20526F6F 74204341 30820122 300D0609 2A864886 
+
+  F70D0101 01050003 82010F00 3082010A 02820101 00E23BE1 1172DEA8 A4D3A357 
+
+  AA50A28F 0B7790C9 A2A5EE12 CE965B01 0920CC01 93A74E30 B753F743 C4690057 
+
+  9DE28D22 DD870640 008109CE CE1B83BF DFCD3B71 46E2D666 C705B376 27168F7B 
+
+  9E1E957D EEB748A3 08DAD6AF 7A0C3906 657F4A5D 1FBC17F8 ABBEEE28 D7747F7A 
+
+  78995985 686E5C23 324BBF4E C0E85A6D E370BF77 10BFFC01 F685D9A8 44105832 
+
+  A97518D5 D1A2BE47 E2276AF4 9A33F849 08608BD4 5FB43A84 BFA1AA4A 4C7D3ECF 
+
+  4F5F6C76 5EA04B37 919EDC22 E66DCE14 1A8E6ACB FECDB314 6417C75B 299E32BF 
+
+  F2EEFAD3 0B42D4AB B74132DA 0CD4EFF8 81D5BB8D 583FB51B E84928A2 70DA3104 
+
+  DDF7B216 F24C0A4E 07A8ED4A 3D5EB57F A390C3AF 27020301 0001A363 3061300E 
+
+  0603551D 0F0101FF 04040302 0186300F 0603551D 130101FF 04053003 0101FF30 
+
+  1D060355 1D0E0416 041403DE 503556D1 4CBB66F0 A3E21B1B C397B23D D155301F 
+
+  0603551D 23041830 16801403 DE503556 D14CBB66 F0A3E21B 1BC397B2 3DD15530 
+
+  0D06092A 864886F7 0D010105 05000382 010100CB 9C37AA48 13120AFA DD449C4F 
+
+  52B0F4DF AE04F579 7908A324 18FC4B2B 84C02DB9 D5C7FEF4 C11F58CB B86D9C7A 
+
+  74E79829 AB11B5E3 70A0A1CD 4C889993 8C9170E2 AB0F1CBE 93A9FF63 D5E40760 
+
+  D3A3BF9D 5B09F1D5 8EE353F4 8E63FA3F A7DBB466 DF6266D6 D16E418D F22DB5EA 
+
+  774A9F9D 58E22B59 C04023ED 2D288245 3E795492 2698E080 48A837EF F0D67960 
+
+  16DEACE8 0ECD6EAC 4417382F 49DAE145 3E2AB936 53CF3A50 06F72EE8 C457496C 
+
+  612118D5 04AD783C 2C3A806B A7EBAF15 14E9D889 C1B9386C E2916C8A FF64B977 
+
+  255730C0 1B24A3E1 DCE9DF47 7CB5B424 080530EC 2DBD0BBF 45BF50B9 A9F3EB98 
+
+  0112ADC8 88C69834 5F8D0A3C C6E9D595 956DDE
+
+  	quit
+
+ certificate ca 18DAD19E267DE8BB4A2158CDCC6B3B4A
+
+  308204D3 308203BB A0030201 02021018 DAD19E26 7DE8BB4A 2158CDCC 6B3B4A30 
+
+  0D06092A 864886F7 0D010105 05003081 CA310B30 09060355 04061302 55533117 
+
+  30150603 55040A13 0E566572 69536967 6E2C2049 6E632E31 1F301D06 0355040B 
+
+  13165665 72695369 676E2054 72757374 204E6574 776F726B 313A3038 06035504 
+
+  0B133128 63292032 30303620 56657269 5369676E 2C20496E 632E202D 20466F72 
+
+  20617574 686F7269 7A656420 75736520 6F6E6C79 31453043 06035504 03133C56 
+
+  65726953 69676E20 436C6173 73203320 5075626C 69632050 72696D61 72792043 
+
+  65727469 66696361 74696F6E 20417574 686F7269 7479202D 20473530 1E170D30 
+
+  36313130 38303030 3030305A 170D3336 30373136 32333539 35395A30 81CA310B 
+
+  30090603 55040613 02555331 17301506 0355040A 130E5665 72695369 676E2C20 
+
+  496E632E 311F301D 06035504 0B131656 65726953 69676E20 54727573 74204E65 
+
+  74776F72 6B313A30 38060355 040B1331 28632920 32303036 20566572 69536967 
+
+  6E2C2049 6E632E20 2D20466F 72206175 74686F72 697A6564 20757365 206F6E6C 
+
+  79314530 43060355 0403133C 56657269 5369676E 20436C61 73732033 20507562 
+
+  6C696320 5072696D 61727920 43657274 69666963 6174696F 6E204175 74686F72 
+
+  69747920 2D204735 30820122 300D0609 2A864886 F70D0101 01050003 82010F00 
+
+  3082010A 02820101 00AF2408 08297A35 9E600CAA E74B3B4E DC7CBC3C 451CBB2B 
+
+  E0FE2902 F95708A3 64851527 F5F1ADC8 31895D22 E82AAAA6 42B38FF8 B955B7B1 
+
+  B74BB3FE 8F7E0757 ECEF43DB 66621561 CF600DA4 D8DEF8E0 C362083D 5413EB49 
+
+  CA595485 26E52B8F 1B9FEBF5 A191C233 49D84363 6A524BD2 8FE87051 4DD18969 
+
+  7BC770F6 B3DC1274 DB7B5D4B 56D396BF 1577A1B0 F4A225F2 AF1C9267 18E5F406 
+
+  04EF90B9 E400E4DD 3AB519FF 02BAF43C EEE08BEB 378BECF4 D7ACF2F6 F03DAFDD 
+
+  75913319 1D1C40CB 74241921 93D914FE AC2A52C7 8FD50449 E48D6347 883C6983 
+
+  CBFE47BD 2B7E4FC5 95AE0E9D D4D143C0 6773E314 087EE53F 9F73B833 0ACF5D3F 
+
+  3487968A EE53E825 15020301 0001A381 B23081AF 300F0603 551D1301 01FF0405 
+
+  30030101 FF300E06 03551D0F 0101FF04 04030201 06306D06 082B0601 05050701 
+
+  0C046130 5FA15DA0 5B305930 57305516 09696D61 67652F67 69663021 301F3007 
+
+  06052B0E 03021A04 148FE5D3 1A86AC8D 8E6BC3CF 806AD448 182C7B19 2E302516 
+
+  23687474 703A2F2F 6C6F676F 2E766572 69736967 6E2E636F 6D2F7673 6C6F676F 
+
+  2E676966 301D0603 551D0E04 1604147F D365A7C2 DDECBBF0 3009F343 39FA02AF 
+
+  33313330 0D06092A 864886F7 0D010105 05000382 01010093 244A305F 62CFD81A 
+
+  982F3DEA DC992DBD 77F6A579 2238ECC4 A7A07812 AD620E45 7064C5E7 97662D98 
+
+  097E5FAF D6CC2865 F201AA08 1A47DEF9 F97C925A 0869200D D93E6D6E 3C0D6ED8 
+
+  E6069140 18B9F8C1 EDDFDB41 AAE09620 C9CD6415 3881C994 EEA28429 0B136F8E 
+
+  DB0CDD25 02DBA48B 1944D241 7A05694A 584F60CA 7E826A0B 02AA2517 39B5DB7F 
+
+  E784652A 958ABD86 DE5E8116 832D10CC DEFDA882 2A6D281F 0D0BC4E5 E71A2619 
+
+  E1F4116F 10B595FC E7420532 DBCE9D51 5E28B69E 85D35BEF A57D4540 728EB70E 
+
+  6B0E06FB 33354871 B89D278B C4655F0D 86769C44 7AF6955C F65D3208 33A454B6 
+
+  183F685C F2424A85 3854835F D1E82CF2 AC11D6A8 ED636A
+
+  	quit
+
+ certificate ca 01
+
+  308201CC 30820152 A0030201 02020101 300A0608 2A8648CE 3D040303 302C310E 
+
+  300C0603 55040A13 05436973 636F311A 30180603 55040313 11436973 636F2045 
+
+  43432052 6F6F7420 43413024 170D3133 30343034 30383135 34345A18 13323035 
+
+  33303430 34303831 3534342E 3730345A 302C310E 300C0603 55040A13 05436973 
+
+  636F311A 30180603 55040313 11436973 636F2045 43432052 6F6F7420 43413076 
+
+  30100607 2A8648CE 3D020106 052B8104 00220362 00047EC0 C3BCD81B C6F36791 
+
+  4DD6788C E6B57539 047F2FFE 60D0AC77 2AD36D02 41455467 B058B719 BFCCBD4B 
+
+  365C7B5B 8338ECA6 D74D3026 61B34B8B AB5E0E15 263B4C88 AB0270C9 22370250 
+
+  75C0D5D4 4834C7BF 5853FEAE CB8F7320 F5065B12 87CAA342 3040300E 0603551D 
+
+  0F0101FF 04040302 0106300F 0603551D 130101FF 04053003 0101FF30 1D060355 
+
+  1D0E0416 0414A445 B62FA331 B17615B0 0A1833CA F6AD4F3D 2804300A 06082A86 
+
+  48CE3D04 03030368 00306502 3063415D 449305AF F01A0174 2AA56561 97DEE73B 
+
+  4960D816 6DD05D2C B30E3F60 5A8376ED 2D9A90B9 5FE845B3 04509819 BF023100 
+
+  D9A837EE D78C7895 E7D2FE16 F13F63D7 1018AABC 560B0196 0BCBC842 9F9F7190 
+
+  1C8F4597 5584D806 2485A5B7 85DDC303
+
+  	quit
+
+ certificate ca 019A335878CE16C1C1
+
+  30820321 30820209 A0030201 02020901 9A335878 CE16C1C1 300D0609 2A864886 
+
+  F70D0101 0B050030 2D310E30 0C060355 040A1305 43697363 6F311B30 19060355 
+
+  04031312 43697363 6F20526F 6F742043 41203230 39393020 170D3136 30383039 
+
+  32303538 32385A18 0F323039 39303830 39323035 3832385A 302D310E 300C0603 
+
+  55040A13 05436973 636F311B 30190603 55040313 12436973 636F2052 6F6F7420 
+
+  43412032 30393930 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+
+  82010A02 82010100 D3B6E335 7E0D3EF4 67E58A4E 1AC6508A D48D9F6F 711208BF 
+
+  3EB64F24 3979617E B27FCE57 D16DEEB4 C513F489 418C2962 818F422F BD615FE0 
+
+  05BF9F2C C247CBA3 4EDE1AD7 511BE794 802976D7 610ECBE1 8320FA59 999A0FC8 
+
+  BF718911 CDC70985 3406C63C 83D2EE2C CBEAC223 66030336 8D6CCDAB 410F02BB 
+
+  7F17A462 40AABA4D ADDEED52 1F0D9EC9 EB9380DB 10120361 6B49EF55 8FDECAA5 
+
+  045E0DC9 BA1BB72A 147E5FF8 2ADD438A B001AE33 58DC8CDE 43A951BE B7EC335D 
+
+  F66FA7E9 6102C9CF C8503FB6 7BECA9DB 59016482 87EC9BC3 A6ED94EC D04F7EBE 
+
+  769855FC 01F09982 45D5EBD6 E9FA261F B1A1F50E F5C87CFA 4DA7DDF3 18A5125F 
+
+  1123E30F 3CD6DDB3 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 14389557 
+
+  0F34234E F3A12620 BA1491C7 41881DA3 5B300D06 092A8648 86F70D01 010B0500 
+
+  03820101 008DE299 A3EE3177 4E5316DA BDF672A7 580D09F8 39B27413 A73CCC18 
+
+  943ACA7C 129EDB05 6EE4024C BD18E024 8A18FC21 D53DA08E 587E7C51 3A9F8E2F 
+
+  797946AB C90FECDF A44AAC18 0C325C2B 58D22DC4 4EB6E4F1 EE68DE84 8C3D5675 
+
+  6891319D A1CBC178 1422B3E6 181412F3 7E3D4359 C2C3E7A5 4EAADC0C B4FB5D53 
+
+  E13AE2C0 257C909C 77716BB4 36F4F2A5 80825CCB 1C49F2C5 411D776E 8FB5CFA5 
+
+  CD9B7D12 79C9ABC6 49900553 2A8C264C 56F03187 15B58869 D874F450 B8DAADD3 
+
+  1213CC24 8446A837 41556A62 71495243 5537A8F4 76698C54 A661D7B1 E0A8B9C5 
+
+  3CA92606 5350F614 1C34CDC2 4B356F10 02B40821 28FCD27F C7367A59 7D7F7FC0 
+
+  DFD5E5DB 16
+
+  	quit
+
+!
+
+spanning-tree mode pvst
+
+spanning-tree extend system-id
+
+errdisable recovery cause security-violation
+
+errdisable recovery interval 180
+
+!
+
+!
+
+!
+
+!
+
+vlan internal allocation policy ascending
+
+!
+
+lldp run
+
+!
+
+! 
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+!
+
+interface GigabitEthernet0/1
+
+ description al router                                            
+
+ switchport mode trunk
+
+!
+
+interface GigabitEthernet0/2
+
+ description vlan 43 usuarios2_MTY
+
+ switchport access vlan 43
+
+ switchport mode access
+
+ switchport port-security maximum 40
+
+ switchport port-security
+
+ no cdp enable
+
+ no lldp transmit
+
+ spanning-tree portfast edge
+
+!
+
+interface GigabitEthernet0/3
+
+!
+
+interface GigabitEthernet0/4
+
+!
+
+interface GigabitEthernet0/5
+
+ description vlan 25 MPLS_MTY     
+
+ switchport access vlan 25
+
+ switchport mode access
+
+ no cdp enable
+
+ no lldp transmit
+
+!
+
+interface GigabitEthernet0/6
+
+ description vlan 46 a internet Colima                        
+
+ switchport access vlan 46
+
+ switchport mode access
+
+ no cdp enable
+
+ no lldp transmit
+
+!
+
+interface GigabitEthernet0/7
+
+!
+
+interface GigabitEthernet0/8
+
+!
+
+interface GigabitEthernet0/9
+
+!
+
+interface GigabitEthernet0/10
+
+!
+
+interface GigabitEthernet0/11
+
+!
+
+interface GigabitEthernet0/12
+
+!
+
+interface GigabitEthernet0/13
+
+!
+
+interface GigabitEthernet0/14
+
+!
+
+interface GigabitEthernet0/15
+
+!
+
+interface GigabitEthernet0/16
+
+!
+
+interface Vlan1
+
+ ip address dhcp
+
+ shutdown
+
+!
+
+interface Vlan48
+
+ ip address 172.4.48.1 255.255.255.0
+
+!
+
+ip default-gateway 172.4.48.254
+
+ip forward-protocol nd
+
+!
+
+ip http server
+
+ip http secure-server
+
+ip ssh version 2
+
+!
+
+!
+
+logging host 172.4.31.1
+
+access-list 2 remark ACL admin_gdl
+
+access-list 2 permit 172.4.0.0 0.0.0.255
+
+access-list 2 permit 172.4.31.0 0.0.0.255
+
+access-list 2 deny   any log
+
+!
+
+banner motd ^C
+
+
+
+##################################################
+
+
+
+ Unauthorized access to this device is prohibited 
+
+
+
+##################################################
+
+b
+
+(
+
+ $$$b  `---.__
+
+  "$$b        `--.                          ___.---uuudP
+
+   `$$b           `.__.------.__     __.---'      $$$$"              .
+
+     "$b          -'            `-.-'            $$$"              .'|
+
+       ".                                       d$"             _.'  |
+
+         `.   /                              ..."             .'     |
+
+           `./                           ..::-'            _.'       |
+
+            /                         .:::-'            .-'         .'
+
+           :                          ::''\          _.'            |
+
+          .' .-.             .-.           `.      .'               |
+
+          : /'$$|           .@"$\           `.   .'              _.-'
+
+         .'|$u$$|          |$$,$$|           |  <            _.-'
+
+         | `:$$:'          :$$$$$:           `.  `.       .-'
+
+         :                  `"--'             |    `-.     \
+
+        :##.       ==             .###.       `.      `.    `\
+
+        |##:                      :###:        |        >     >
+
+        |#'     `..'`..'          `###'        x:      /     /
+
+         \                                   xXX|     /    ./
+
+          \                                xXXX'|    /   ./
+
+          /`-.                                  `.  /   /
+
+         :    `-  ...........,                   | /  .'
+
+         |         ``:::::::'       .            |<    `.
+
+         |             ```          |           x| \ `.:``.
+
+         |                         .'    /'   xXX|  `:`M`M':.
+
+         |    |                    ;    /:' xXXX'|  -'MMMMM:'
+
+         `.  .'                   :    /:'       |-'MMMM.-'
+
+          |  |                   .'   /'        .'MMM.-'
+
+          `'`'                   :  ,'          |MMM<
+
+            |                     `'            |tbap\
+
+             \                                  :MM.-'
+
+              \                 |              .''
+
+               \.               `.            /
+
+                /     .:::::::.. :           /
+
+               |     .:::::::::::`.         /
+
+               |   .:::------------\       /
+
+              /   .''               >::'  /
+
+              `',:                 :    .'
+
+                                   `:.:'
+
+
+
+^C
+
+!
+
+line con 0
+
+ exec-timeout 5 0
+
+ login local
+
+line vty 0 4
+
+ exec-timeout 5 0
+
+ login local
+
+line vty 5 15
+
+ exec-timeout 5 0
+
+ login local
+
+!
+
+ntp server pool.ntp.org
+
+ntp server 10.40.72.254
+
+mac address-table aging-time 3600
+
+!
+
+!
+
+pnp profile pnp_cco_profile
+
+ transport https host devicehelper.cisco.com port 443
+
+end
+
+
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show sessions
-% No connections open
+show sessions
+
+% No connections open
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show spanning-tree
-
-VLAN0001
-  Spanning tree enabled protocol ieee
-  Root ID    Priority    32769
-             Address     6c5e.3bf5.8180
-             This bridge is the root
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
-             Address     6c5e.3bf5.8180
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-             Aging Time  3600 sec
-
-Interface           Role Sts Cost      Prio.Nbr Type
-------------------- ---- --- --------- -------- --------------------------------
-Gi0/1               Desg FWD 19        128.1    P2p 
-
-
-
-VLAN0025
-  Spanning tree enabled protocol ieee
-  Root ID    Priority    32769
-             Address     084f.f94f.3100
-             Cost        19
-             Port        5 (GigabitEthernet0/5)
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32793  (priority 32768 sys-id-ext 25)
-             Address     6c5e.3bf5.8180
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-             Aging Time  3600 sec
-
-Interface           Role Sts Cost      Prio.Nbr Type
-------------------- ---- --- --------- -------- --------------------------------
-Gi0/1               Desg FWD 19        128.1    P2p 
-Gi0/5               Root FWD 19        128.5    P2p 
-
-
-
-VLAN0041
-  Spanning tree enabled protocol ieee
-  Root ID    Priority    32809
-             Address     6c5e.3bf5.8180
-             This bridge is the root
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32809  (priority 32768 sys-id-ext 41)
-             Address     6c5e.3bf5.8180
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-             Aging Time  3600 sec
-
-Interface           Role Sts Cost      Prio.Nbr Type
-------------------- ---- --- --------- -------- --------------------------------
-Gi0/1               Desg FWD 19        128.1    P2p 
-
-
-
-VLAN0043
-  Spanning tree enabled protocol ieee
-  Root ID    Priority    32811
-             Address     6c5e.3bf5.8180
-             This bridge is the root
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32811  (priority 32768 sys-id-ext 43)
-             Address     6c5e.3bf5.8180
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-             Aging Time  3600 sec
-
-Interface           Role Sts Cost      Prio.Nbr Type
-------------------- ---- --- --------- -------- --------------------------------
-Gi0/1               Desg FWD 19        128.1    P2p 
-Gi0/2               Desg FWD 4         128.2    P2p Edge 
-
-
-
-VLAN0046
-  Spanning tree enabled protocol ieee
-  Root ID    Priority    24648
-             Address     b838.6170.d980
-             Cost        5
-             Port        6 (GigabitEthernet0/6)
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32814  (priority 32768 sys-id-ext 46)
-             Address     6c5e.3bf5.8180
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-             Aging Time  3600 sec
-
-Interface           Role Sts Cost      Prio.Nbr Type
-------------------- ---- --- --------- -------- --------------------------------
-Gi0/1               Desg FWD 19        128.1    P2p 
-Gi0/6               Root FWD 4         128.6    P2p 
-
-
-
-VLAN0048
-  Spanning tree enabled protocol ieee
-  Root ID    Priority    32816
-             Address     6c5e.3bf5.8180
-             This bridge is the root
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-
-  Bridge ID  Priority    32816  (priority 32768 sys-id-ext 48)
-             Address     6c5e.3bf5.8180
-             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
-             Aging Time  3600 sec
-
-Interface           Role Sts Cost      Prio.Nbr Type
-------------------- ---- --- --------- -------- --------------------------------
-Gi0/1               Desg FWD 19        128.1    P2p 
-
-
+show spanning-tree
+
+
+
+VLAN0001
+
+  Spanning tree enabled protocol ieee
+
+  Root ID    Priority    32769
+
+             Address     6c5e.3bf5.8180
+
+             This bridge is the root
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+
+
+  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)
+
+             Address     6c5e.3bf5.8180
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+             Aging Time  3600 sec
+
+
+
+Interface           Role Sts Cost      Prio.Nbr Type
+
+------------------- ---- --- --------- -------- --------------------------------
+
+Gi0/1               Desg FWD 19        128.1    P2p 
+
+
+
+
+
+
+
+VLAN0025
+
+  Spanning tree enabled protocol ieee
+
+  Root ID    Priority    32769
+
+             Address     084f.f94f.3100
+
+             Cost        19
+
+             Port        5 (GigabitEthernet0/5)
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+
+
+  Bridge ID  Priority    32793  (priority 32768 sys-id-ext 25)
+
+             Address     6c5e.3bf5.8180
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+             Aging Time  3600 sec
+
+
+
+Interface           Role Sts Cost      Prio.Nbr Type
+
+------------------- ---- --- --------- -------- --------------------------------
+
+Gi0/1               Desg FWD 19        128.1    P2p 
+
+Gi0/5               Root FWD 19        128.5    P2p 
+
+
+
+
+
+
+
+VLAN0041
+
+  Spanning tree enabled protocol ieee
+
+  Root ID    Priority    32809
+
+             Address     6c5e.3bf5.8180
+
+             This bridge is the root
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+
+
+  Bridge ID  Priority    32809  (priority 32768 sys-id-ext 41)
+
+             Address     6c5e.3bf5.8180
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+             Aging Time  3600 sec
+
+
+
+Interface           Role Sts Cost      Prio.Nbr Type
+
+------------------- ---- --- --------- -------- --------------------------------
+
+Gi0/1               Desg FWD 19        128.1    P2p 
+
+
+
+
+
+
+
+VLAN0043
+
+  Spanning tree enabled protocol ieee
+
+  Root ID    Priority    32811
+
+             Address     6c5e.3bf5.8180
+
+             This bridge is the root
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+
+
+  Bridge ID  Priority    32811  (priority 32768 sys-id-ext 43)
+
+             Address     6c5e.3bf5.8180
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+             Aging Time  3600 sec
+
+
+
+Interface           Role Sts Cost      Prio.Nbr Type
+
+------------------- ---- --- --------- -------- --------------------------------
+
+Gi0/1               Desg FWD 19        128.1    P2p 
+
+Gi0/2               Desg FWD 4         128.2    P2p Edge 
+
+
+
+
+
+
+
+VLAN0046
+
+  Spanning tree enabled protocol ieee
+
+  Root ID    Priority    24648
+
+             Address     b838.6170.d980
+
+             Cost        5
+
+             Port        6 (GigabitEthernet0/6)
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+
+
+  Bridge ID  Priority    32814  (priority 32768 sys-id-ext 46)
+
+             Address     6c5e.3bf5.8180
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+             Aging Time  3600 sec
+
+
+
+Interface           Role Sts Cost      Prio.Nbr Type
+
+------------------- ---- --- --------- -------- --------------------------------
+
+Gi0/1               Desg FWD 19        128.1    P2p 
+
+Gi0/6               Root FWD 4         128.6    P2p 
+
+
+
+
+
+
+
+VLAN0048
+
+  Spanning tree enabled protocol ieee
+
+  Root ID    Priority    32816
+
+             Address     6c5e.3bf5.8180
+
+             This bridge is the root
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+
+
+  Bridge ID  Priority    32816  (priority 32768 sys-id-ext 48)
+
+             Address     6c5e.3bf5.8180
+
+             Hello Time   2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+             Aging Time  3600 sec
+
+
+
+Interface           Role Sts Cost      Prio.Nbr Type
+
+------------------- ---- --- --------- -------- --------------------------------
+
+Gi0/1               Desg FWD 19        128.1    P2p 
+
+
+
+
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show version
-Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E8, RELEASE SOFTWARE (fc3)
-Technical Support: http://www.cisco.com/techsupport
-Copyright (c) 1986-2019 by Cisco Systems, Inc.
-Compiled Fri 15-Mar-19 12:14 by prod_rel_team
-
-ROM: Bootstrap program is C3560CX boot loader
-BOOTLDR: C3560CX Boot Loader (C3560CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
-
-Sw_Monterrey uptime is 4 hours, 25 minutes
-System returned to ROM by power-on
-System restarted at 19:03:45 UTC Sat Nov 16 2019
-System image file is "flash:/c3560cx-universalk9-mz.152-4.E8/c3560cx-universalk9-mz.152-4.E8.bin"
-Last reload reason: Reload command
-
-
-
-This product contains cryptographic features and is subject to United
-States and local country laws governing import, export, transfer and
-use. Delivery of Cisco cryptographic products does not imply
-third-party authority to import, export, distribute or use encryption.
-Importers, exporters, distributors and users are responsible for
-compliance with U.S. and local country laws. By using this product you
-agree to comply with applicable laws and regulations. If you are unable
-to comply with U.S. and local laws, return this product immediately.
-
-A summary of U.S. laws governing Cisco cryptographic products may be found at:
-http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
-
-If you require further assistance please contact us by sending email to
-export@cisco.com.
-
-License Level: ipbase
-License Type: Default. No valid license found.
-Next reload license Level: ipbase
-
-cisco WS-C3560CX-12PC-S (APM86XXX) processor (revision L0) with 524288K bytes of memory.
-Processor board ID FOC2328TJCV
-Last reset from reload command
-2 Virtual Ethernet interfaces
-16 Gigabit Ethernet interfaces
-The password-recovery mechanism is enabled.
-
-512K bytes of flash-simulated non-volatile configuration memory.
-Base ethernet MAC Address       : 6C:5E:3B:F5:81:80
-Motherboard assembly number     : 73-100864-04
-Power supply part number        : 341-0675-02
-Motherboard serial number       : FOC232701B8
-Power supply serial number      : LIT23102E4G
-Model revision number           : L0
-Motherboard revision number     : C0
-Model number                    : WS-C3560CX-12PC-S
-System serial number            : FOC2328TJCV
-Top Assembly Part Number        : 68-100571-01
-Top Assembly Revision Number    : E0
-Version ID                      : V03
-CLEI Code Number                : CMM1L10DRB
-Hardware Board Revision Number  : 0x09
-
-
-Switch Ports Model                     SW Version            SW Image                 
------- ----- -----                     ----------            ----------               
-*    1 16    WS-C3560CX-12PC-S         15.2(4)E8             C3560CX-UNIVERSALK9-M    
-
-
-Configuration register is 0xF
-
+show version
+
+Cisco IOS Software, C3560CX Software (C3560CX-UNIVERSALK9-M), Version 15.2(4)E8, RELEASE SOFTWARE (fc3)
+
+Technical Support: http://www.cisco.com/techsupport
+
+Copyright (c) 1986-2019 by Cisco Systems, Inc.
+
+Compiled Fri 15-Mar-19 12:14 by prod_rel_team
+
+
+
+ROM: Bootstrap program is C3560CX boot loader
+
+BOOTLDR: C3560CX Boot Loader (C3560CX-HBOOT-M) Version 15.2(4r)E5, RELEASE SOFTWARE (fc4)
+
+
+
+Sw_Monterrey uptime is 4 hours, 25 minutes
+
+System returned to ROM by power-on
+
+System restarted at 19:03:45 UTC Sat Nov 16 2019
+
+System image file is "flash:/c3560cx-universalk9-mz.152-4.E8/c3560cx-universalk9-mz.152-4.E8.bin"
+
+Last reload reason: Reload command
+
+
+
+
+
+
+
+This product contains cryptographic features and is subject to United
+
+States and local country laws governing import, export, transfer and
+
+use. Delivery of Cisco cryptographic products does not imply
+
+third-party authority to import, export, distribute or use encryption.
+
+Importers, exporters, distributors and users are responsible for
+
+compliance with U.S. and local country laws. By using this product you
+
+agree to comply with applicable laws and regulations. If you are unable
+
+to comply with U.S. and local laws, return this product immediately.
+
+
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+
+
+If you require further assistance please contact us by sending email to
+
+export@cisco.com.
+
+
+
+License Level: ipbase
+
+License Type: Default. No valid license found.
+
+Next reload license Level: ipbase
+
+
+
+cisco WS-C3560CX-12PC-S (APM86XXX) processor (revision L0) with 524288K bytes of memory.
+
+Processor board ID FOC2328TJCV
+
+Last reset from reload command
+
+2 Virtual Ethernet interfaces
+
+16 Gigabit Ethernet interfaces
+
+The password-recovery mechanism is enabled.
+
+
+
+512K bytes of flash-simulated non-volatile configuration memory.
+
+Base ethernet MAC Address       : 6C:5E:3B:F5:81:80
+
+Motherboard assembly number     : 73-100864-04
+
+Power supply part number        : 341-0675-02
+
+Motherboard serial number       : FOC232701B8
+
+Power supply serial number      : LIT23102E4G
+
+Model revision number           : L0
+
+Motherboard revision number     : C0
+
+Model number                    : WS-C3560CX-12PC-S
+
+System serial number            : FOC2328TJCV
+
+Top Assembly Part Number        : 68-100571-01
+
+Top Assembly Revision Number    : E0
+
+Version ID                      : V03
+
+CLEI Code Number                : CMM1L10DRB
+
+Hardware Board Revision Number  : 0x09
+
+
+
+
+
+Switch Ports Model                     SW Version            SW Image                 
+
+------ ----- -----                     ----------            ----------               
+
+*    1 16    WS-C3560CX-12PC-S         15.2(4)E8             C3560CX-UNIVERSALK9-M    
+
+
+
+
+
+Configuration register is 0xF
+
+
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------
-show vlan
-
-VLAN Name                             Status    Ports
----- -------------------------------- --------- -------------------------------
-1    default                          active    Gi0/3, Gi0/4, Gi0/7, Gi0/8
-                                                Gi0/9, Gi0/10, Gi0/11, Gi0/12
-                                                Gi0/13, Gi0/14, Gi0/15, Gi0/16
-25   MPLS_GDL                         active    Gi0/5
-41   usuarios1MTY_500                 active    
-43   usuarios2MTY_500                 active    Gi0/2
-46   internet_MTY                     active    Gi0/6
-48   Admin_MTY                        active    
-1002 fddi-default                     act/unsup 
-1003 token-ring-default               act/unsup 
-1004 fddinet-default                  act/unsup 
-1005 trnet-default                    act/unsup 
-
-VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
----- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
-1    enet  100001     1500  -      -      -        -    -        0      0   
-25   enet  100025     1500  -      -      -        -    -        0      0   
-41   enet  100041     1500  -      -      -        -    -        0      0   
-43   enet  100043     1500  -      -      -        -    -        0      0   
-46   enet  100046     1500  -      -      -        -    -        0      0   
-48   enet  100048     1500  -      -      -        -    -        0      0   
-1002 fddi  101002     1500  -      -      -        -    -        0      0   
-1003 tr    101003     1500  -      -      -        -    -        0      0   
-1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
-1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
-
-Remote SPAN VLANs
-------------------------------------------------------------------------------
-
-
-Primary Secondary Type              Ports
-------- --------- ----------------- ------------------------------------------
-
+show vlan
+
+
+
+VLAN Name                             Status    Ports
+
+---- -------------------------------- --------- -------------------------------
+
+1    default                          active    Gi0/3, Gi0/4, Gi0/7, Gi0/8
+
+                                                Gi0/9, Gi0/10, Gi0/11, Gi0/12
+
+                                                Gi0/13, Gi0/14, Gi0/15, Gi0/16
+
+25   MPLS_GDL                         active    Gi0/5
+
+41   usuarios1MTY_500                 active    
+
+43   usuarios2MTY_500                 active    Gi0/2
+
+46   internet_MTY                     active    Gi0/6
+
+48   Admin_MTY                        active    
+
+1002 fddi-default                     act/unsup 
+
+1003 token-ring-default               act/unsup 
+
+1004 fddinet-default                  act/unsup 
+
+1005 trnet-default                    act/unsup 
+
+
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+
+1    enet  100001     1500  -      -      -        -    -        0      0   
+
+25   enet  100025     1500  -      -      -        -    -        0      0   
+
+41   enet  100041     1500  -      -      -        -    -        0      0   
+
+43   enet  100043     1500  -      -      -        -    -        0      0   
+
+46   enet  100046     1500  -      -      -        -    -        0      0   
+
+48   enet  100048     1500  -      -      -        -    -        0      0   
+
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+
+
+
+Remote SPAN VLANs
+
+------------------------------------------------------------------------------
+
+
+
+
+
+Primary Secondary Type              Ports
+
+------- --------- ----------------- ------------------------------------------
+
+
+
 Sw_Monterrey#
 ---------------------------------------------------------------------------------------------

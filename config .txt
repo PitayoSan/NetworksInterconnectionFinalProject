@@ -94,7 +94,7 @@ enable password 7 0822455D0A16
 no aaa new-model
 !
 no ip domain lookup
-ip domain name barco.com
+ip domain name example.com
 !
 ip dhcp pool webuidhcp
 !

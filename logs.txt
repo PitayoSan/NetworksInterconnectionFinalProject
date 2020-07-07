@@ -48,7 +48,7 @@ Compiled Mon 05-Nov-18 19:31 by mcpre
 *Nov 14 22:36:43.034: %SSH-5-ENABLED: SSH 1.99 has been enabled
 *Nov 14 22:36:43.109: %PKI-4-NOCONFIGAUTOSAVE: Configuration was modified.  Issue "write memory" to save new IOS PKI configuration
 *Nov 14 22:36:43.194: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named TP-self-signed-1696920293.server has been generated or imported by crypto-engine
-*Nov 14 22:37:45.835: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named Guadalajara.barco.com has been generated or imported by crypto-engine
+*Nov 14 22:37:45.835: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named Guadalajara.example.com has been generated or imported by crypto-engine
 *Nov 14 22:38:00.958: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 5 password. However, type 5 passwords will soon be deprecated. Migrate to a supported password type
 *Nov 14 22:38:00.994: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
 *Nov 14 22:36:20.037: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0/0, changed state to down
@@ -69,7 +69,7 @@ Compiled Mon 05-Nov-18 19:31 by mcpre
 *Nov 14 22:36:43.034: %SSH-5-ENABLED: SSH 1.99 has been enabled
 *Nov 14 22:36:43.109: %PKI-4-NOCONFIGAUTOSAVE: Configuration was modified.  Issue "write memory" to save new IOS PKI configuration
 *Nov 14 22:36:43.194: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named TP-self-signed-1696920293.server has been generated or imported by crypto-engine
-*Nov 14 22:37:45.835: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named Guadalajara.barco.com has been generated or imported by crypto-engine
+*Nov 14 22:37:45.835: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named Guadalajara.example.com has been generated or imported by crypto-engine
 *Nov 14 22:38:00.958: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 5 password. However, type 5 passwords will soon be deprecated. Migrate to a supported password type
 *Nov 14 22:38:00.994: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
 *Nov 14 22:38:01.068: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 5 password. However, type 5 passwords will soon be deprecated. Migrate to a supported password type
