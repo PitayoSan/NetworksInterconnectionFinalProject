@@ -20,13 +20,13 @@ Capabilexampleodes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 
-Colima.barco.com Fas 0/1           152             R S I  CISCO2901 Gig 0/0
+Colima.example.com Fas 0/1           152             R S I  CISCO2901 Gig 0/0
 
 Sw_Colima#
 ---------------------------------------------------------------------------------------------
 show hosts
 
-Default domain is barco.com
+Default domain is example.com
 
 Name/address lookup uses static mappings
 
@@ -1712,7 +1712,7 @@ ip subnet-zero
 
 no ip domain-lookup
 
-ip domain-name barco.com
+ip domain-name example.com
 
 login block-for 300 attempts 3 within 60
 

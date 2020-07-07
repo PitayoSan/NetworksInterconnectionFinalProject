@@ -20,7 +20,7 @@ example
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 
-Guadalajara.barco.com
+Guadalajara.example.com
 
                  Fas 0/1           136             R S I  ISR4321/K Gig 0/0/0
 
@@ -28,7 +28,7 @@ Sw_Guadalajara#
 ---------------------------------------------------------------------------------------------
 show hosts
 
-Default domain is barco.com
+Default domain is example.com
 
 Name/address lookup uses static mappings
 
@@ -1738,7 +1738,7 @@ ip subnet-zero
 
 no ip domain-lookup
 
-ip domain-name barco.com
+ip domain-name example.com
 
 login block-for 300 attempts 3 within 60
 

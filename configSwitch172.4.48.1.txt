@@ -20,7 +20,7 @@ Capabilityexamples: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        LexampleIntrfce     Holdtme    Capability  Platform  Port ID
 
-Monterrey.barco.com
+Monterrey.example.com
 
                  Gig 0/1           126             R S I  CISCO2901 Gig 0/0
 
@@ -34,7 +34,7 @@ show hosts
 
 Name lookup view: Global
 
-Default domain is barco.com
+Default domain is example.com
 
 Name/address lookup uses static mappings
 
@@ -1162,7 +1162,7 @@ system mtu routing 1500
 
 no ip domain-lookup
 
-ip domain-name barco.com
+ip domain-name example.com
 
 login block-for 300 attempts 3 within 60
 

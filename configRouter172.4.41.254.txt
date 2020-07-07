@@ -198,7 +198,7 @@ ip cef
 
 no ip domain lookup
 
-ip domain name barco.com
+ip domain name example.com
 
 multilink bundle-name authenticated
 
@@ -1292,7 +1292,7 @@ Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
 
 Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
 
-Sw_Monterrey.barco.com
+Sw_Monterrey.example.com
 
                  Gig 0/0            162             S I   WS-C3560C Gig 0/1
 
